@@ -1,0 +1,8 @@
+{
+  "plan_id": "BACKUP_1770977792",
+  "backup_type": "full",
+  "timestamp": "2026-02-13T14:16:32.144970",
+  "items": [
+    {
+      "path": "C:\\Users\\knoux\\Documents",
+      "priority": 

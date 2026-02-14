@@ -1,0 +1,240 @@
+{
+    "info": {
+        "name": "KNOUX OS Guardian - Complete API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": "مجموعة Postman كاملة لجميع وحدات KNOUX OS Guardian الـ 12 مع RBAC، التنفيذ غير المتزامن، والتحقق من التدقيق",
+        "version": "1.0.0"
+    },
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "{{access_token}}",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000",
+            "type": "string"
+        },
+        {
+            "key": "access_token",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "key": "lastAsyncRunId",
+            "value": "",
+            "type": "string"
+        }
+    ],
+    "item": [
+        {
+            "name": "🔐 المصادقة",
+            "description": "نقاط نهاية المصادقة والحصول على رمز JWT",
+            "item": [
+                {
+                    "name": "تسجيل الدخول - مدير النظام",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "KNOUX-OS-Guardian-Postman/1.0.0"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('رمز الحالة هو 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('الاستجابة تحتوي على رمز الوصول', function() {",
+                                    "    pm.expect(pm.response.json()).to.have.property('access_token');",
+                                    "    pm.expect(pm.response.json().access_token).to.be.a('string');",
+                                    "    pm.environment.set('access_token', pm.response.json().access_token);",
+                                    "});",
+                                    "",
+                                    "pm.test('الاستجابة تحتوي على معلومات الصلاحية', function() {",
+                                    "    const json = pm.response.json();",
+                                    "    pm.expect(json).to.have.property('token_type', 'bearer');",
+                                    "    pm.expect(json).to.have.property('expires_in');",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "تسجيل الدخول - محلل النظام",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"username\": \"analyst\",\n  \"password\": \"analyst123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "تسجيل الدخول - مستعرض النظام",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"username\": \"viewer\",\n  \"password\": \"viewer123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "🏥 الصحة والنظام",
+            "description": "نقاط نهاية فحص الصحة والمعلومات العامة",
+            "item": [
+                {
+                    "name": "فحص صحة النظام",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/health",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "health"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('رمز الحالة هو 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('النظام يعمل بشكل صحيح', function() {",
+                                    "    pm.expect(pm.response.json()).to.have.property('status', 'healthy');",
+                                    "    pm.expect(pm.response.json()).to.have.property('modules_available', 12);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "عرض جميع الوحدات",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('رمز الحالة هو 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('يتم إرجاع 12 وحدة', function() {",
+                                    "    pm.expect(pm.response.json()).to.be.an('array');",
+                                    "    pm.expect(pm.response.json()).to.have.lengthOf(12);",
+                                    "});",
+                                    "",
+                                    "pm.test('كل وحدة تحتوي على الحقول المطلوبة', function() {",
+                                    "    const modules = pm.response.json();",
+                                    "    modules.forEach(module => {",
+                                    "        pm.expect(module).to.have.property('module_name');",
+                                    "        pm.expect(module).to.have.property('enabled');",
+                                    "        pm.expect(module).to.have.property('status');",
+                                    "        pm.expect(module).to.have.property('health_score');",
+                                    "    });",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }

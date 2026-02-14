@@ -1,0 +1,1407 @@
+2026-02-13 12:21:22,232 - __main__ - INFO - 🚀 بدء تشغيل KNOUX OS Guardian...
+2026-02-13 12:21:22,235 - __main__ - INFO - ⚙️  تحميل الإعدادات...
+2026-02-13 12:21:22,257 - src.core.config - INFO - Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 12:21:22,260 - __main__ - INFO - 💾 تهيئة قاعدة البيانات...
+2026-02-13 12:21:22,313 - src.core.database - INFO - Database tables initialized
+2026-02-13 12:21:22,320 - src.core.database - INFO - Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 12:21:22,334 - __main__ - INFO - 📡 تهيئة Communication Bus...
+2026-02-13 12:21:22,339 - src.core.communication_bus - INFO - Communication Bus initialized
+2026-02-13 12:21:22,352 - src.core.communication_bus - INFO - Communication Bus started
+2026-02-13 12:21:22,366 - __main__ - INFO - 📊 تهيئة Telemetry Collector...
+2026-02-13 12:21:22,367 - src.core.telemetry - INFO - Telemetry Collector initialized (enabled: False)
+2026-02-13 12:21:22,369 - __main__ - INFO - 💾 تهيئة Snapshot Manager...
+2026-02-13 12:21:22,370 - src.core.safe_execution - INFO - Snapshot Manager initialized: F:\KNOUX_OS_Guardian\data\snapshots
+2026-02-13 12:21:22,370 - __main__ - INFO - 🧠 تهيئة Decision Orchestrator...
+2026-02-13 12:21:22,370 - src.core.decision_engine - INFO - Rule Engine initialized
+2026-02-13 12:21:22,371 - src.core.decision_engine - INFO - Registered rule: cpu.high_usage
+2026-02-13 12:21:22,373 - src.core.decision_engine - INFO - Registered rule: memory.high_usage
+2026-02-13 12:21:22,375 - src.core.decision_engine - INFO - Registered rule: disk.low_space
+2026-02-13 12:21:22,375 - src.core.decision_engine - INFO - Decision Orchestrator initialized
+2026-02-13 12:21:22,376 - __main__ - INFO - 🔄 تهيئة جميع الموديولات الـ 12...
+2026-02-13 12:21:22,376 - __main__ - INFO - 💾 تهيئة Disk Space Orchestrator...
+2026-02-13 12:21:22,377 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator initialized
+2026-02-13 12:21:22,384 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator started
+2026-02-13 12:21:22,390 - __main__ - INFO - 🛡️  تهيئة Update Guardian...
+2026-02-13 12:21:22,392 - __main__ - ERROR - ❌ خطأ حرج: name 'Path' is not defined
+Traceback (most recent call last):
+  File "F:\KNOUX_OS_Guardian\main.py", line 193, in main
+    active_modules = initialize_modules(config, logger)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\KNOUX_OS_Guardian\main.py", line 67, in initialize_modules
+    update_guardian = get_update_guardian()
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\KNOUX_OS_Guardian\src\modules\update_guardian\__init__.py", line 492, in get_update_guardian
+    _update_guardian_instance = UpdateGuardian()
+                                ^^^^^^^^^^^^^^^^
+  File "F:\KNOUX_OS_Guardian\src\modules\update_guardian\__init__.py", line 80, in __init__
+    self.blacklist = self._load_blacklist()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\KNOUX_OS_Guardian\src\modules\update_guardian\__init__.py", line 463, in _load_blacklist
+    blacklist_file = Path(__file__).parent / 'update_blacklist.json'
+                     ^^^^
+NameError: name 'Path' is not defined
+2026-02-13 12:21:46,698 - __main__ - INFO - 🚀 بدء تشغيل KNOUX OS Guardian...
+2026-02-13 12:21:46,700 - __main__ - INFO - ⚙️  تحميل الإعدادات...
+2026-02-13 12:21:46,723 - src.core.config - INFO - Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 12:21:46,724 - __main__ - INFO - 💾 تهيئة قاعدة البيانات...
+2026-02-13 12:21:46,728 - src.core.database - INFO - Database tables initialized
+2026-02-13 12:21:46,729 - src.core.database - INFO - Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 12:21:46,730 - __main__ - INFO - 📡 تهيئة Communication Bus...
+2026-02-13 12:21:46,731 - src.core.communication_bus - INFO - Communication Bus initialized
+2026-02-13 12:21:46,733 - src.core.communication_bus - INFO - Communication Bus started
+2026-02-13 12:21:46,734 - __main__ - INFO - 📊 تهيئة Telemetry Collector...
+2026-02-13 12:21:46,734 - src.core.telemetry - INFO - Telemetry Collector initialized (enabled: False)
+2026-02-13 12:21:46,734 - __main__ - INFO - 💾 تهيئة Snapshot Manager...
+2026-02-13 12:21:46,735 - src.core.safe_execution - INFO - Snapshot Manager initialized: F:\KNOUX_OS_Guardian\data\snapshots
+2026-02-13 12:21:46,736 - __main__ - INFO - 🧠 تهيئة Decision Orchestrator...
+2026-02-13 12:21:46,736 - src.core.decision_engine - INFO - Rule Engine initialized
+2026-02-13 12:21:46,737 - src.core.decision_engine - INFO - Registered rule: cpu.high_usage
+2026-02-13 12:21:46,738 - src.core.decision_engine - INFO - Registered rule: memory.high_usage
+2026-02-13 12:21:46,738 - src.core.decision_engine - INFO - Registered rule: disk.low_space
+2026-02-13 12:21:46,738 - src.core.decision_engine - INFO - Decision Orchestrator initialized
+2026-02-13 12:21:46,739 - __main__ - INFO - 🔄 تهيئة جميع الموديولات الـ 12...
+2026-02-13 12:21:46,739 - __main__ - INFO - 💾 تهيئة Disk Space Orchestrator...
+2026-02-13 12:21:46,740 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator initialized
+2026-02-13 12:21:46,741 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator started
+2026-02-13 12:21:46,742 - __main__ - INFO - 🛡️  تهيئة Update Guardian...
+2026-02-13 12:21:46,745 - src.modules.update_guardian - INFO - Update Guardian initialized
+2026-02-13 12:21:46,746 - src.modules.update_guardian - INFO - Checking for Windows updates...
+2026-02-13 12:21:46,746 - src.modules.update_guardian - INFO - Update Guardian started
+2026-02-13 12:21:46,748 - __main__ - INFO - ⚡ تهيئة Performance Optimizer...
+2026-02-13 12:21:46,748 - src.modules.performance_optimizer - INFO - Performance Optimizer initialized
+2026-02-13 12:21:46,750 - src.modules.performance_optimizer - INFO - Performance Optimizer started
+2026-02-13 12:21:46,750 - __main__ - INFO - 🌐 تهيئة Network Monitor...
+2026-02-13 12:21:46,751 - src.modules.network_monitor - INFO - Network Monitor initialized
+2026-02-13 12:21:46,767 - src.modules.network_monitor - INFO - Network Monitor started
+2026-02-13 12:21:46,786 - __main__ - INFO - 🔒 تهيئة Security Hardener...
+2026-02-13 12:21:46,787 - src.modules.security_hardener - INFO - Security Hardener initialized
+2026-02-13 12:21:46,821 - src.modules.security_hardener - INFO - Running security audit...
+2026-02-13 12:21:46,821 - src.modules.security_hardener - INFO - Security Hardener started
+2026-02-13 12:21:46,849 - __main__ - INFO - 🖥️  تهيئة Driver Health Manager...
+2026-02-13 12:21:46,849 - src.modules.driver_health_manager - INFO - Driver Health Manager initialized
+2026-02-13 12:21:46,876 - src.modules.driver_health_manager - INFO - Driver Health Manager started
+2026-02-13 12:21:46,920 - __main__ - INFO - 🔍 تهيئة Forensic Analyzer...
+2026-02-13 12:21:46,935 - src.modules.forensic_analyzer - INFO - Forensic Analyzer initialized
+2026-02-13 12:21:47,150 - src.modules.forensic_analyzer - INFO - Forensic Analyzer started
+2026-02-13 12:21:47,179 - __main__ - INFO - 🌡️  تهيئة Thermal Controller...
+2026-02-13 12:21:47,180 - src.modules.thermal_controller - INFO - Thermal Controller initialized
+2026-02-13 12:21:47,239 - src.modules.thermal_controller - INFO - Thermal Controller started
+2026-02-13 12:21:47,247 - __main__ - INFO - 🔋 تهيئة Power Manager...
+2026-02-13 12:21:47,251 - src.modules.power_manager - INFO - Power Manager initialized
+2026-02-13 12:21:47,323 - src.modules.power_manager - INFO - Power Manager started
+2026-02-13 12:21:47,420 - __main__ - INFO - 📱 تهيئة Application Curator...
+2026-02-13 12:21:47,464 - src.modules.application_lifecycle_curator - INFO - Application Curator initialized
+2026-02-13 12:21:47,540 - src.modules.application_lifecycle_curator - INFO - Application Curator started
+2026-02-13 12:21:47,581 - __main__ - INFO - 🗂️  تهيئة Registry Guardian...
+2026-02-13 12:21:47,646 - src.modules.registry_guardian - INFO - Registry Guardian initialized
+2026-02-13 12:21:47,997 - src.modules.registry_guardian - INFO - Starting registry scan...
+2026-02-13 12:21:47,998 - src.modules.registry_guardian - INFO - Registry Guardian started
+2026-02-13 12:21:48,067 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:48,549 - __main__ - INFO - 💿 تهيئة Backup Orchestrator...
+2026-02-13 12:21:48,611 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:49,004 - src.modules.backup_orchestrator - INFO - Backup Orchestrator initialized
+2026-02-13 12:21:49,157 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:49,535 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:49,535 - src.modules.backup_orchestrator - INFO - Creating backup plan...
+2026-02-13 12:21:49,572 - src.modules.backup_orchestrator - INFO - Backup Orchestrator started
+2026-02-13 12:21:49,587 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:49,618 - __main__ - INFO - ✅ تم تهيئة 12 موديول بنجاح
+2026-02-13 12:21:49,750 - __main__ - INFO - 📊 معلومات النظام:
+2026-02-13 12:21:49,798 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:49,847 - __main__ - INFO -    - CPU: 4 cores
+2026-02-13 12:21:49,952 - __main__ - INFO -    - RAM: 11.8 GB
+2026-02-13 12:21:50,011 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:50,026 - __main__ - INFO -    - Disk: 96.0 GB
+2026-02-13 12:21:50,090 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:50,106 - __main__ - INFO - 🔄 بدء الحلقة الرئيسية...
+2026-02-13 12:21:50,155 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:21:50,201 - __main__ - INFO -    (اضغط Ctrl+C للإيقاف)
+2026-02-13 12:21:50,226 - src.modules.backup_orchestrator - ERROR - Error analyzing system for backup: name 'os' is not defined
+2026-02-13 12:21:50,594 - src.core.decision_engine - INFO - Decision Orchestrator main loop started
+2026-02-13 12:21:50,818 - src.modules.backup_orchestrator - WARNING - No backup items found
+2026-02-13 12:21:52,109 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:21:55,618 - src.modules.registry_guardian - INFO - Registry scan complete: Found 0 issues
+2026-02-13 12:21:56,359 - src.modules.forensic_analyzer - ERROR - Error getting crash events: Invalid isoformat string: '/Date(1770893327072)/'
+2026-02-13 12:21:56,359 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:22:04,529 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:22:04,540 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:22:08,370 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:22:10,616 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:22:10,618 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:22:10,639 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:22:10,641 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:22:10,650 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:22:10,708 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:22:10,710 - src.modules.performance_optimizer - WARNING - Low memory detected: 536MB available
+2026-02-13 12:22:10,712 - src.modules.performance_optimizer - INFO - Performing emergency memory optimization
+2026-02-13 12:22:10,717 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:22:17,010 - src.modules.update_guardian - ERROR - Error enumerating updates: Command '['powershell', '-Command', '\n            $Session = New-Object -ComObject Microsoft.Update.Session\n            $Searcher = $Session.CreateUpdateSearcher()\n            $SearchResult = $Searcher.Search("IsInstalled=0 and IsHidden=0")\n            \n            $updates = @()\n            foreach ($Update in $SearchResult.Updates) {\n                $updateObj = @{\n                    Title = $Update.Title\n                    Description = $Update.Description\n                    KB = ""\n                    Size = [math]::Round($Update.MaxDownloadSize / 1MB, 2)\n                    ReleaseDate = $Update.LastDeploymentChangeTime\n                    Categories = @($Update.Categories | % { $_.Name })\n                }\n                \n                # Extract KB number\n                if ($Update.Title -match "KB\\d+") {\n                    $updateObj.KB = $Matches[0]\n                }\n                \n                $updates += $updateObj\n            }\n            \n            $updates | ConvertTo-Json\n            ']' timed out after 30 seconds
+2026-02-13 12:22:17,830 - src.modules.update_guardian - INFO - No pending updates found
+2026-02-13 12:22:26,032 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 12:22:29,661 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:22:29,665 - src.modules.performance_optimizer - INFO - Emergency trimmed Windsurf.exe working set
+2026-02-13 12:22:31,601 - src.modules.performance_optimizer - INFO - Emergency trimmed Everything.exe working set
+2026-02-13 12:22:31,617 - src.modules.security_hardener - ERROR - Error checking SMBv1: Command '['powershell', '-Command', '\n            $smbv1 = Get-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -ErrorAction SilentlyContinue\n            if ($smbv1 -and $smbv1.State -eq "Enabled") { "مفعل" } else { "معطل" }\n            ']' timed out after 10 seconds
+2026-02-13 12:22:33,751 - src.modules.security_hardener - INFO - Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 12:22:34,326 - src.modules.security_hardener - ERROR - Error running security audit: Object of type SettingCategory is not JSON serializable
+2026-02-13 12:22:35,914 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:22:35,975 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:22:36,007 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:22:36,074 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:22:43,142 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 99.7%
+2026-02-13 12:22:43,143 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:22:45,357 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:22:45,358 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:22:45,360 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:22:57,910 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:23:03,000 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:23:34,844 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:23:56,425 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 96.9%
+2026-02-13 12:23:56,427 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:23:58,888 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:23:58,898 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:23:58,914 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:24:35,185 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 97.8%
+2026-02-13 12:24:35,185 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:24:37,193 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:24:37,195 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:24:37,196 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 8912)
+2026-02-13 12:25:35,007 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:25:43,708 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 96.1%
+2026-02-13 12:25:43,708 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:25:45,260 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:25:45,273 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 8772)
+2026-02-13 12:25:45,275 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 2772)
+2026-02-13 12:27:11,194 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:27:13,705 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:27:26,824 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:29:21,756 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:30:04,432 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 12:30:35,282 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 12:30:49,723 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:32:14,276 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:32:16,499 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:32:36,224 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:34:17,959 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:35:55,198 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:37:17,066 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:37:19,413 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:37:28,693 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:38:56,626 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:40:24,425 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:41:52,246 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:42:20,082 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:42:22,490 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:42:43,434 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:42:59,089 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 84.9%
+2026-02-13 12:42:59,090 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:43:00,608 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:43:00,609 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:43:00,610 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 244)
+2026-02-13 12:43:20,664 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:43:45,757 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:44:49,447 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:45:16,100 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 12:45:47,322 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 12:46:13,677 - __main__ - INFO - 🚀 بدء تشغيل KNOUX OS Guardian...
+2026-02-13 12:46:13,677 - __main__ - INFO - ⚙️  تحميل الإعدادات...
+2026-02-13 12:46:13,699 - src.core.config - INFO - Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 12:46:13,699 - __main__ - INFO - 💾 تهيئة قاعدة البيانات...
+2026-02-13 12:46:13,700 - src.core.database - INFO - Database tables initialized
+2026-02-13 12:46:13,700 - src.core.database - INFO - Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 12:46:13,700 - __main__ - INFO - 📡 تهيئة Communication Bus...
+2026-02-13 12:46:13,700 - src.core.communication_bus - INFO - Communication Bus initialized
+2026-02-13 12:46:13,705 - src.core.communication_bus - INFO - Communication Bus started
+2026-02-13 12:46:13,705 - __main__ - INFO - 📊 تهيئة Telemetry Collector...
+2026-02-13 12:46:13,705 - src.core.telemetry - INFO - Telemetry Collector initialized (enabled: False)
+2026-02-13 12:46:13,705 - __main__ - INFO - 💾 تهيئة Snapshot Manager...
+2026-02-13 12:46:13,705 - src.core.safe_execution - INFO - Snapshot Manager initialized: F:\KNOUX_OS_Guardian\data\snapshots
+2026-02-13 12:46:13,708 - __main__ - INFO - 🧠 تهيئة Decision Orchestrator...
+2026-02-13 12:46:13,709 - src.core.decision_engine - INFO - Rule Engine initialized
+2026-02-13 12:46:13,709 - src.core.decision_engine - INFO - Registered rule: cpu.high_usage
+2026-02-13 12:46:13,710 - src.core.decision_engine - INFO - Registered rule: memory.high_usage
+2026-02-13 12:46:13,710 - src.core.decision_engine - INFO - Registered rule: disk.low_space
+2026-02-13 12:46:13,710 - src.core.decision_engine - INFO - Decision Orchestrator initialized
+2026-02-13 12:46:13,711 - __main__ - INFO - 🔄 تهيئة جميع الموديولات الـ 12...
+2026-02-13 12:46:13,711 - __main__ - INFO - 💾 تهيئة Disk Space Orchestrator...
+2026-02-13 12:46:13,711 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator initialized
+2026-02-13 12:46:13,712 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator started
+2026-02-13 12:46:13,713 - __main__ - INFO - 🛡️  تهيئة Update Guardian...
+2026-02-13 12:46:13,714 - src.modules.update_guardian - INFO - Update Guardian initialized
+2026-02-13 12:46:13,716 - src.modules.update_guardian - INFO - Checking for Windows updates...
+2026-02-13 12:46:13,716 - src.modules.update_guardian - INFO - Update Guardian started
+2026-02-13 12:46:13,717 - __main__ - INFO - ⚡ تهيئة Performance Optimizer...
+2026-02-13 12:46:13,718 - src.modules.performance_optimizer - INFO - Performance Optimizer initialized
+2026-02-13 12:46:13,719 - src.modules.performance_optimizer - INFO - Performance Optimizer started
+2026-02-13 12:46:13,720 - __main__ - INFO - 🌐 تهيئة Network Monitor...
+2026-02-13 12:46:13,721 - src.modules.network_monitor - INFO - Network Monitor initialized
+2026-02-13 12:46:13,726 - src.modules.network_monitor - INFO - Network Monitor started
+2026-02-13 12:46:13,729 - __main__ - INFO - 🔒 تهيئة Security Hardener...
+2026-02-13 12:46:13,729 - src.modules.security_hardener - INFO - Security Hardener initialized
+2026-02-13 12:46:13,729 - src.modules.security_hardener - INFO - Running security audit...
+2026-02-13 12:46:13,729 - src.modules.security_hardener - INFO - Security Hardener started
+2026-02-13 12:46:13,729 - __main__ - INFO - 🖥️  تهيئة Driver Health Manager...
+2026-02-13 12:46:13,729 - src.modules.driver_health_manager - INFO - Driver Health Manager initialized
+2026-02-13 12:46:13,734 - src.modules.driver_health_manager - INFO - Driver Health Manager started
+2026-02-13 12:46:13,739 - __main__ - INFO - 🔍 تهيئة Forensic Analyzer...
+2026-02-13 12:46:13,741 - src.modules.forensic_analyzer - INFO - Forensic Analyzer initialized
+2026-02-13 12:46:13,755 - src.modules.forensic_analyzer - INFO - Forensic Analyzer started
+2026-02-13 12:46:13,755 - __main__ - INFO - 🌡️  تهيئة Thermal Controller...
+2026-02-13 12:46:13,755 - src.modules.thermal_controller - INFO - Thermal Controller initialized
+2026-02-13 12:46:13,784 - src.modules.thermal_controller - INFO - Thermal Controller started
+2026-02-13 12:46:13,784 - __main__ - INFO - 🔋 تهيئة Power Manager...
+2026-02-13 12:46:13,784 - src.modules.power_manager - INFO - Power Manager initialized
+2026-02-13 12:46:13,854 - src.modules.power_manager - INFO - Power Manager started
+2026-02-13 12:46:13,854 - __main__ - INFO - 📱 تهيئة Application Curator...
+2026-02-13 12:46:13,864 - src.modules.application_lifecycle_curator - INFO - Application Curator initialized
+2026-02-13 12:46:13,953 - src.modules.application_lifecycle_curator - INFO - Application Curator started
+2026-02-13 12:46:13,970 - __main__ - INFO - 🗂️  تهيئة Registry Guardian...
+2026-02-13 12:46:14,006 - src.modules.registry_guardian - INFO - Registry Guardian initialized
+2026-02-13 12:46:14,075 - src.modules.registry_guardian - INFO - Starting registry scan...
+2026-02-13 12:46:14,087 - src.modules.registry_guardian - INFO - Registry Guardian started
+2026-02-13 12:46:14,167 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,314 - __main__ - INFO - 💿 تهيئة Backup Orchestrator...
+2026-02-13 12:46:14,331 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,443 - src.modules.backup_orchestrator - INFO - Backup Orchestrator initialized
+2026-02-13 12:46:14,472 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,614 - src.modules.backup_orchestrator - INFO - Creating backup plan...
+2026-02-13 12:46:14,630 - src.modules.backup_orchestrator - INFO - Backup Orchestrator started
+2026-02-13 12:46:14,649 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,677 - __main__ - INFO - ✅ تم تهيئة 12 موديول بنجاح
+2026-02-13 12:46:14,695 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,700 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,700 - __main__ - INFO - 📊 معلومات النظام:
+2026-02-13 12:46:14,705 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,709 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:14,780 - __main__ - INFO -    - CPU: 4 cores
+2026-02-13 12:46:14,890 - __main__ - INFO -    - RAM: 11.8 GB
+2026-02-13 12:46:14,995 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:46:15,053 - __main__ - INFO -    - Disk: 96.0 GB
+2026-02-13 12:46:15,053 - __main__ - INFO - 🔄 بدء الحلقة الرئيسية...
+2026-02-13 12:46:15,053 - __main__ - INFO -    (اضغط Ctrl+C للإيقاف)
+2026-02-13 12:46:15,053 - src.core.decision_engine - INFO - Decision Orchestrator main loop started
+2026-02-13 12:46:15,752 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=4292, name='powershell.exe')
+2026-02-13 12:46:15,947 - src.modules.forensic_analyzer - ERROR - Error getting crash events: Invalid isoformat string: '/Date(1770893327072)/'
+2026-02-13 12:46:16,100 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:46:16,100 - src.modules.registry_guardian - INFO - Registry scan complete: Found 0 issues
+2026-02-13 12:46:18,225 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:46:18,225 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:46:18,230 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:46:18,235 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:46:19,487 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:46:19,566 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:46:22,127 - src.modules.security_hardener - INFO - Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 12:46:22,136 - src.modules.security_hardener - ERROR - Error running security audit: Object of type SettingCategory is not JSON serializable
+2026-02-13 12:46:26,179 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:46:29,975 - src.modules.backup_orchestrator - INFO - Executing backup: BACKUP_1770972389
+2026-02-13 12:46:29,977 - src.modules.backup_orchestrator - ERROR - Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 12:46:30,828 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:46:30,831 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:46:30,832 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:46:30,833 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:46:31,417 - src.modules.power_manager - ERROR - Error getting power mode: Command '['powershell', '-Command', '\n            powercfg /getactivescheme\n            ']' timed out after 5 seconds
+2026-02-13 12:46:36,729 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:46:36,731 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:46:38,842 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:46:38,842 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:46:38,843 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 2772)
+2026-02-13 12:46:41,693 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:46:43,768 - src.modules.update_guardian - ERROR - Error enumerating updates: Command '['powershell', '-Command', '\n            $Session = New-Object -ComObject Microsoft.Update.Session\n            $Searcher = $Session.CreateUpdateSearcher()\n            $SearchResult = $Searcher.Search("IsInstalled=0 and IsHidden=0")\n            \n            $updates = @()\n            foreach ($Update in $SearchResult.Updates) {\n                $updateObj = @{\n                    Title = $Update.Title\n                    Description = $Update.Description\n                    KB = ""\n                    Size = [math]::Round($Update.MaxDownloadSize / 1MB, 2)\n                    ReleaseDate = $Update.LastDeploymentChangeTime\n                    Categories = @($Update.Categories | % { $_.Name })\n                }\n                \n                # Extract KB number\n                if ($Update.Title -match "KB\\d+") {\n                    $updateObj.KB = $Matches[0]\n                }\n                \n                $updates += $updateObj\n            }\n            \n            $updates | ConvertTo-Json\n            ']' timed out after 30 seconds
+2026-02-13 12:46:43,770 - src.modules.update_guardian - INFO - No pending updates found
+2026-02-13 12:47:12,308 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:47:12,310 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:47:12,311 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:47:12,312 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:47:18,323 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:47:24,712 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:47:24,714 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:47:26,753 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 12:47:27,406 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:47:27,504 - src.modules.performance_optimizer - INFO - Emergency throttled pwsh.exe (PID 13160)
+2026-02-13 12:47:29,374 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:47:29,590 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:47:29,593 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:47:29,594 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:47:29,594 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:47:30,587 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:47:30,590 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:47:30,591 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:47:30,592 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:47:32,905 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:48:04,630 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 97.1%
+2026-02-13 12:48:04,630 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:48:07,784 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:48:07,785 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:48:07,787 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:48:08,448 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:48:08,449 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:48:08,450 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:48:08,452 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:48:11,060 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:48:28,880 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:48:36,192 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:48:37,102 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=9952, name='chrome.exe')
+2026-02-13 12:48:37,983 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:48:37,986 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:48:37,986 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:48:37,987 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:48:51,627 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:49:07,519 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:49:22,665 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:49:38,738 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:50:09,891 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:50:24,930 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:50:47,047 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:50:55,952 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:51:00,453 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 94.0%
+2026-02-13 12:51:00,525 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:51:09,217 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:51:09,224 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 12:51:09,233 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 12:51:10,535 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:51:10,544 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:51:10,546 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:51:10,547 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:51:10,652 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:51:10,653 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:51:10,654 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:51:10,655 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:51:11,974 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:51:27,729 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:51:28,255 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:51:30,004 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 96.9%
+2026-02-13 12:51:30,006 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:51:34,598 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:51:34,663 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 12:51:34,683 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 7580)
+2026-02-13 12:51:42,242 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:51:42,244 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:51:42,244 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:51:42,246 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:51:43,314 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:51:44,184 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:51:44,213 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:51:44,430 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:51:44,431 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:51:44,432 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:51:44,433 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:51:47,824 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:51:47,825 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 12:51:47,826 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:51:47,827 - src.modules.performance_optimizer - WARNING - Low memory detected: 1003MB available
+2026-02-13 12:51:47,828 - src.modules.performance_optimizer - INFO - Performing emergency memory optimization
+2026-02-13 12:51:50,409 - src.modules.performance_optimizer - INFO - Emergency trimmed Windsurf.exe working set
+2026-02-13 12:51:50,621 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 12:51:50,793 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 12:52:20,511 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 86.8%
+2026-02-13 12:52:20,512 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:52:22,639 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:52:22,639 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 12:52:22,640 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 2772)
+2026-02-13 12:52:33,622 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:52:37,231 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:52:37,560 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=12084, name='chrome.exe')
+2026-02-13 12:52:55,585 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 95.0%
+2026-02-13 12:52:55,587 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:52:57,767 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:52:57,768 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 12:52:57,770 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 12:53:03,243 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:53:09,857 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:54:58,872 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:55:05,072 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:55:26,371 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 93.1%
+2026-02-13 12:55:26,373 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:55:28,497 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:55:28,499 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:55:28,499 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 12:56:01,052 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 93.1%
+2026-02-13 12:56:01,053 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:56:02,805 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 12:56:02,806 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:56:02,807 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:56:31,676 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:56:36,926 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 93.1%
+2026-02-13 12:56:36,927 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:56:38,590 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:56:38,595 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:56:38,596 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 2772)
+2026-02-13 12:56:45,267 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:56:46,591 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:57:09,637 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:57:11,415 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 97.3%
+2026-02-13 12:57:11,416 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:57:13,536 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:57:13,537 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 12:57:13,538 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 12:57:35,412 - __main__ - INFO - 🚀 بدء تشغيل KNOUX OS Guardian...
+2026-02-13 12:57:35,413 - __main__ - INFO - ⚙️  تحميل الإعدادات...
+2026-02-13 12:57:35,430 - src.core.config - INFO - Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 12:57:35,430 - __main__ - INFO - 💾 تهيئة قاعدة البيانات...
+2026-02-13 12:57:35,453 - src.core.database - INFO - Database tables initialized
+2026-02-13 12:57:35,453 - src.core.database - INFO - Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 12:57:35,454 - __main__ - INFO - 📡 تهيئة Communication Bus...
+2026-02-13 12:57:35,454 - src.core.communication_bus - INFO - Communication Bus initialized
+2026-02-13 12:57:35,455 - src.core.communication_bus - INFO - Communication Bus started
+2026-02-13 12:57:35,456 - __main__ - INFO - 📊 تهيئة Telemetry Collector...
+2026-02-13 12:57:35,456 - src.core.telemetry - INFO - Telemetry Collector initialized (enabled: False)
+2026-02-13 12:57:35,456 - __main__ - INFO - 💾 تهيئة Snapshot Manager...
+2026-02-13 12:57:35,457 - src.core.safe_execution - INFO - Snapshot Manager initialized: F:\KNOUX_OS_Guardian\data\snapshots
+2026-02-13 12:57:35,457 - __main__ - INFO - 🧠 تهيئة Decision Orchestrator...
+2026-02-13 12:57:35,458 - src.core.decision_engine - INFO - Rule Engine initialized
+2026-02-13 12:57:35,458 - src.core.decision_engine - INFO - Registered rule: cpu.high_usage
+2026-02-13 12:57:35,458 - src.core.decision_engine - INFO - Registered rule: memory.high_usage
+2026-02-13 12:57:35,459 - src.core.decision_engine - INFO - Registered rule: disk.low_space
+2026-02-13 12:57:35,460 - src.core.decision_engine - INFO - Decision Orchestrator initialized
+2026-02-13 12:57:35,460 - __main__ - INFO - 🔄 تهيئة جميع الموديولات الـ 12...
+2026-02-13 12:57:35,460 - __main__ - INFO - 💾 تهيئة Disk Space Orchestrator...
+2026-02-13 12:57:35,461 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator initialized
+2026-02-13 12:57:35,462 - src.modules.disk_space_orchestrator - INFO - Disk Space Orchestrator started
+2026-02-13 12:57:35,462 - __main__ - INFO - 🛡️  تهيئة Update Guardian...
+2026-02-13 12:57:35,463 - src.modules.update_guardian - INFO - Update Guardian initialized
+2026-02-13 12:57:35,465 - src.modules.update_guardian - INFO - Checking for Windows updates...
+2026-02-13 12:57:35,465 - src.modules.update_guardian - INFO - Update Guardian started
+2026-02-13 12:57:35,467 - __main__ - INFO - ⚡ تهيئة Performance Optimizer...
+2026-02-13 12:57:35,467 - src.modules.performance_optimizer - INFO - Performance Optimizer initialized
+2026-02-13 12:57:35,470 - src.modules.performance_optimizer - INFO - Performance Optimizer started
+2026-02-13 12:57:35,471 - __main__ - INFO - 🌐 تهيئة Network Monitor...
+2026-02-13 12:57:35,471 - src.modules.network_monitor - INFO - Network Monitor initialized
+2026-02-13 12:57:35,480 - src.modules.network_monitor - INFO - Network Monitor started
+2026-02-13 12:57:35,481 - __main__ - INFO - 🔒 تهيئة Security Hardener...
+2026-02-13 12:57:35,482 - src.modules.security_hardener - INFO - Security Hardener initialized
+2026-02-13 12:57:35,484 - src.modules.security_hardener - INFO - Running security audit...
+2026-02-13 12:57:35,484 - src.modules.security_hardener - INFO - Security Hardener started
+2026-02-13 12:57:35,488 - __main__ - INFO - 🖥️  تهيئة Driver Health Manager...
+2026-02-13 12:57:35,489 - src.modules.driver_health_manager - INFO - Driver Health Manager initialized
+2026-02-13 12:57:35,505 - src.modules.driver_health_manager - INFO - Driver Health Manager started
+2026-02-13 12:57:35,506 - __main__ - INFO - 🔍 تهيئة Forensic Analyzer...
+2026-02-13 12:57:35,508 - src.modules.forensic_analyzer - INFO - Forensic Analyzer initialized
+2026-02-13 12:57:35,549 - src.modules.forensic_analyzer - INFO - Forensic Analyzer started
+2026-02-13 12:57:35,550 - __main__ - INFO - 🌡️  تهيئة Thermal Controller...
+2026-02-13 12:57:35,553 - src.modules.thermal_controller - INFO - Thermal Controller initialized
+2026-02-13 12:57:35,573 - src.modules.thermal_controller - INFO - Thermal Controller started
+2026-02-13 12:57:35,574 - __main__ - INFO - 🔋 تهيئة Power Manager...
+2026-02-13 12:57:35,575 - src.modules.power_manager - INFO - Power Manager initialized
+2026-02-13 12:57:35,648 - src.modules.power_manager - INFO - Power Manager started
+2026-02-13 12:57:35,667 - __main__ - INFO - 📱 تهيئة Application Curator...
+2026-02-13 12:57:35,668 - src.modules.application_lifecycle_curator - INFO - Application Curator initialized
+2026-02-13 12:57:35,772 - src.modules.application_lifecycle_curator - INFO - Application Curator started
+2026-02-13 12:57:35,828 - __main__ - INFO - 🗂️  تهيئة Registry Guardian...
+2026-02-13 12:57:35,924 - src.modules.registry_guardian - INFO - Registry Guardian initialized
+2026-02-13 12:57:36,121 - src.modules.registry_guardian - INFO - Starting registry scan...
+2026-02-13 12:57:36,129 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,129 - src.modules.registry_guardian - INFO - Registry Guardian started
+2026-02-13 12:57:36,232 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,254 - __main__ - INFO - 💿 تهيئة Backup Orchestrator...
+2026-02-13 12:57:36,340 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,382 - src.modules.backup_orchestrator - INFO - Backup Orchestrator initialized
+2026-02-13 12:57:36,412 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,535 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,572 - src.modules.backup_orchestrator - INFO - Creating backup plan...
+2026-02-13 12:57:36,572 - src.modules.backup_orchestrator - INFO - Backup Orchestrator started
+2026-02-13 12:57:36,652 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,764 - __main__ - INFO - ✅ تم تهيئة 12 موديول بنجاح
+2026-02-13 12:57:36,849 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:36,877 - __main__ - INFO - 🌐 بدء واجهة المستخدم على المنافذ 3000 و 8080...
+2026-02-13 12:57:36,954 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:37,286 - src.modules.registry_guardian - ERROR - Error enumerating registry keys: name 'path' is not defined
+2026-02-13 12:57:37,411 - src.modules.forensic_analyzer - ERROR - Error analyzing crashes: Object of type AnalysisType is not JSON serializable
+2026-02-13 12:57:37,523 - __main__ - INFO - 📊 معلومات النظام:
+2026-02-13 12:57:37,556 - __main__ - INFO -    - CPU: 4 cores
+2026-02-13 12:57:37,609 - __main__ - INFO -    - RAM: 11.8 GB
+2026-02-13 12:57:37,635 - __main__ - INFO -    - Disk: 96.0 GB
+2026-02-13 12:57:37,669 - __main__ - INFO - 🔄 بدء الحلقة الرئيسية...
+2026-02-13 12:57:37,690 - __main__ - INFO -    (اضغط Ctrl+C للإيقاف)
+2026-02-13 12:57:37,805 - src.core.decision_engine - INFO - Decision Orchestrator main loop started
+2026-02-13 12:57:38,395 - src.modules.registry_guardian - INFO - Registry scan complete: Found 0 issues
+2026-02-13 12:57:38,896 - src.modules.forensic_analyzer - WARNING - Low system stability detected (uptime: 22.2h)
+2026-02-13 12:57:38,896 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 12:57:38,980 - src.modules.forensic_analyzer - ERROR - Error analyzing system stability: Object of type AnalysisType is not JSON serializable
+2026-02-13 12:57:39,020 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-13 12:57:39,141 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:57:39,215 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 12:57:39,245 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-13 12:57:41,889 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:57:44,562 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:57:44,625 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:57:44,640 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:57:44,682 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:57:44,997 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:57:44,999 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:57:45,969 - src.modules.security_hardener - INFO - Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 12:57:46,081 - src.modules.security_hardener - ERROR - Error running security audit: Object of type SettingCategory is not JSON serializable
+2026-02-13 12:57:49,081 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 12:57:50,649 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:57:58,526 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=4624, name='chrome.exe')
+2026-02-13 12:57:59,125 - src.modules.power_manager - ERROR - Error getting power mode: Command '['powershell', '-Command', '\n            powercfg /getactivescheme\n            ']' timed out after 5 seconds
+2026-02-13 12:57:59,854 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:58:01,604 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 12:58:01,657 - src.modules.update_guardian - ERROR - Error enumerating updates: Invalid isoformat string: '/Date(1648152000000)/'
+2026-02-13 12:58:01,658 - src.modules.update_guardian - INFO - No pending updates found
+2026-02-13 12:58:02,388 - src.modules.thermal_controller - ERROR - Error adjusting fan speed: Command '['powershell', '-Command', '\n            powercfg -setacvalueindex SCHEME_CURRENT SUB_PROCESSOR SYSTEMCOOLINGPOLICY 1\n            powercfg -setacvalueindex SCHEME_CURRENT SUB_PROCESSOR PROCTHROTTLEMAX 100\n            powercfg -setactive SCHEME_CURRENT\n            ']' timed out after 10 seconds
+2026-02-13 12:58:02,394 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:58:02,394 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:58:02,396 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:58:04,669 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:58:04,675 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:58:04,688 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:58:04,743 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:58:09,844 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 12:58:10,445 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 12:58:16,379 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:58:16,380 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:58:19,893 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:58:19,898 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:58:19,967 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:58:20,031 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:58:20,148 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 12:58:20,149 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:58:20,150 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 12:58:20,151 - src.modules.performance_optimizer - WARNING - Low memory detected: 814MB available
+2026-02-13 12:58:20,152 - src.modules.performance_optimizer - INFO - Performing emergency memory optimization
+2026-02-13 12:58:20,636 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 12:58:20,682 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 12:58:20,697 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 12:58:20,744 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 12:58:21,830 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 12:58:22,133 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 12:58:22,134 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 12:58:22,208 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:58:24,331 - src.modules.performance_optimizer - INFO - Emergency trimmed Windsurf.exe working set
+2026-02-13 12:58:25,256 - src.modules.performance_optimizer - INFO - Emergency trimmed language_server_windows_x64.exe working set
+2026-02-13 12:58:25,950 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 12:58:26,811 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 12:58:26,812 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 12:58:26,812 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 12:58:31,285 - src.modules.backup_orchestrator - INFO - Executing backup: BACKUP_1770973111
+2026-02-13 12:58:31,288 - src.modules.backup_orchestrator - ERROR - Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 12:58:46,665 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 12:58:49,912 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:00:04,258 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:00:35,186 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:00:36,459 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:00:37,924 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 80.9%
+2026-02-13 13:00:37,924 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:00:40,256 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:00:40,262 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:00:40,272 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 2772)
+2026-02-13 13:00:41,078 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:01:34,566 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:03:10,453 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:03:12,663 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:05:12,407 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:05:36,680 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:05:39,821 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:06:37,510 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:06:58,785 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:07:22,567 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:07:25,957 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:07:44,691 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:08:13,269 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:08:15,265 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:08:31,299 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:08:59,390 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:09:03,068 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:10:03,474 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:10:36,333 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:10:40,004 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:11:35,901 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:11:40,404 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:12:13,078 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:12:16,993 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:13:08,271 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:13:16,099 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:13:18,418 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:13:45,703 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:13:49,398 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:14:40,953 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:15:17,189 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:15:18,421 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:15:23,053 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:15:24,293 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:15:26,223 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:15:47,999 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:15:49,122 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:15:55,164 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:16:09,486 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:16:43,495 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:16:51,246 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:16:54,394 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:17:37,820 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:17:47,603 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:18:19,100 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:18:19,513 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:18:22,214 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:18:22,531 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:19:05,599 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:19:46,608 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=14196, name='backgroundTaskHost.exe')
+2026-02-13 13:19:56,588 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:20:03,866 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:20:51,652 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:21:33,625 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:21:40,575 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:21:46,489 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:21:51,002 - src.modules.backup_orchestrator - INFO - Creating backup plan...
+2026-02-13 13:21:51,002 - src.modules.backup_orchestrator - ERROR - Error analyzing system for backup: name 'os' is not defined
+2026-02-13 13:21:51,002 - src.modules.backup_orchestrator - WARNING - No backup items found
+2026-02-13 13:21:58,647 - src.modules.forensic_analyzer - ERROR - Error getting crash events: Invalid isoformat string: '/Date(1770893327072)/'
+2026-02-13 13:22:29,159 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:23:08,587 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:23:10,402 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:23:22,915 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:23:25,330 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:23:52,716 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:24:36,325 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:24:38,374 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:25:25,675 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:25:34,119 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:26:19,450 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:26:22,258 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:26:34,064 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 82.9%
+2026-02-13 13:26:34,065 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:26:36,155 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:26:37,215 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:26:37,215 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:26:37,216 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:26:39,515 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=9568, name='chrome.exe')
+2026-02-13 13:26:47,991 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:26:52,211 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:26:57,704 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:27:07,265 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:27:08,100 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:27:09,333 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 91.6%
+2026-02-13 13:27:09,334 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:27:11,068 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:27:11,069 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:27:11,069 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:27:28,886 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:27:39,183 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=12904, name='chrome.exe')
+2026-02-13 13:27:50,770 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:28:05,990 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:28:09,208 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:28:21,254 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:28:26,130 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:28:26,133 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:28:26,134 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:28:26,136 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:28:26,215 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:28:26,232 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:28:26,305 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:28:26,366 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:28:26,688 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:28:26,740 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:28:26,765 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:28:26,774 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:28:27,421 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:28:27,424 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:28:27,424 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:28:27,551 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:28:27,552 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:28:31,382 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:28:32,451 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:28:32,746 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:28:32,756 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:28:32,759 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:28:32,881 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:28:32,906 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:28:32,907 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:28:46,341 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:29:03,333 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:29:12,522 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:29:22,618 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=11256, name='RuntimeBroker.exe')
+2026-02-13 13:29:24,072 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:29:24,075 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:29:24,075 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:29:24,076 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:29:24,408 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:29:24,809 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:29:24,812 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:29:24,813 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:29:24,815 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:29:25,006 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:29:25,055 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:29:25,059 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:29:25,063 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:29:34,820 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:29:44,411 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:29:44,422 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:29:44,423 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:29:44,478 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:29:44,505 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:29:45,247 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:29:45,249 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:29:45,250 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:29:45,251 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:29:46,444 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 99.2%
+2026-02-13 13:29:46,445 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:29:46,647 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 98.4%
+2026-02-13 13:29:46,648 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:29:46,878 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:29:46,953 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:29:46,984 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:29:47,055 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:29:50,172 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:29:50,173 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:29:50,176 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 13:29:50,282 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:29:50,409 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:29:50,411 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:29:50,412 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:29:53,732 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:30:25,782 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:30:25,785 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:30:25,786 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:30:25,810 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:30:26,579 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:30:28,758 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:30:28,759 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:30:30,477 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:30:30,479 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:30:30,479 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:30:32,878 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:30:38,206 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:30:38,444 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:30:42,722 - src.modules.power_manager - ERROR - Error in monitoring loop: Object of type PowerSource is not JSON serializable
+2026-02-13 13:30:57,748 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:30:58,981 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 83.1%
+2026-02-13 13:30:58,981 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:31:03,013 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 83.2%
+2026-02-13 13:31:03,014 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:31:04,097 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:31:04,122 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:31:04,142 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:31:04,260 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:31:04,263 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:31:04,264 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:31:04,265 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:31:06,613 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:31:06,616 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:31:06,617 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:31:06,991 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:31:06,992 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:31:08,834 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:31:10,175 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:31:10,179 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:31:10,217 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:31:45,888 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:31:49,332 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:31:55,752 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:32:07,990 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 95.7%
+2026-02-13 13:32:07,991 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:32:10,344 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:32:10,345 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:32:10,346 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:32:11,764 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:32:15,657 - src.modules.power_manager - ERROR - Error getting power mode: Command '['powershell', '-Command', '\n            powercfg /getactivescheme\n            ']' timed out after -0.01600000000325963 seconds
+2026-02-13 13:32:21,030 - src.modules.power_manager - ERROR - Error getting power mode: Command '['powershell', '-Command', '\n            powercfg /getactivescheme\n            ']' timed out after 5 seconds
+2026-02-13 13:32:21,558 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 89.5%
+2026-02-13 13:32:21,611 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:32:22,247 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:32:28,018 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:32:28,033 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:32:28,048 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:32:28,049 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:32:28,402 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:32:28,407 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:32:28,412 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 13:32:28,472 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:32:28,474 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:32:28,474 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:32:28,475 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:32:28,624 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:32:28,667 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:32:28,668 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:32:28,668 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:32:28,668 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:32:28,670 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:32:29,116 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:32:30,528 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:32:30,529 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:32:30,530 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 13:32:43,026 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:32:45,048 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:32:45,051 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:32:47,147 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:32:47,159 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:32:47,162 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 13:33:14,377 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:33:18,147 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=10992, name='conhost.exe')
+2026-02-13 13:33:26,823 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:33:32,964 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 90.3%
+2026-02-13 13:33:32,964 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:33:33,626 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:33:34,210 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:33:37,616 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:33:37,617 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:33:37,618 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:33:38,627 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:33:39,300 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:33:40,892 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 99.6%
+2026-02-13 13:33:40,918 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:33:41,207 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:33:46,545 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:33:49,080 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:33:49,127 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 13:33:49,151 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:33:59,392 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 13:34:05,399 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 13:34:07,981 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=13508, name='chrome.exe')
+2026-02-13 13:34:18,525 - src.core.decision_engine - INFO - Proposed 2 actions
+2026-02-13 13:34:19,021 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:34:19,024 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:34:19,024 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:34:19,037 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:34:19,493 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:34:19,494 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:34:19,494 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:34:19,711 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:34:20,073 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:34:20,093 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:34:20,125 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:34:20,281 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:34:22,237 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:34:22,238 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:34:26,148 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:34:26,153 - src.modules.performance_optimizer - INFO - Emergency throttled language_server_windows_x64.exe (PID 7412)
+2026-02-13 13:34:26,155 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:34:26,156 - src.modules.performance_optimizer - WARNING - Low memory detected: 914MB available
+2026-02-13 13:34:26,157 - src.modules.performance_optimizer - INFO - Performing emergency memory optimization
+2026-02-13 13:34:27,161 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:34:27,210 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:34:27,860 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:34:31,075 - src.modules.performance_optimizer - INFO - Emergency trimmed Windsurf.exe working set
+2026-02-13 13:34:31,650 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 13:34:31,654 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:34:31,933 - src.modules.performance_optimizer - INFO - Emergency trimmed language_server_windows_x64.exe working set
+2026-02-13 13:34:32,090 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:34:32,096 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:34:32,099 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:34:32,110 - src.modules.performance_optimizer - WARNING - Low memory detected: 985MB available
+2026-02-13 13:34:32,143 - src.modules.performance_optimizer - INFO - Performing emergency memory optimization
+2026-02-13 13:34:35,613 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:34:35,673 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:34:35,674 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:34:35,675 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:34:36,359 - src.modules.performance_optimizer - INFO - Emergency trimmed Windsurf.exe working set
+2026-02-13 13:34:36,613 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 13:34:36,720 - src.modules.performance_optimizer - INFO - Emergency trimmed chrome.exe working set
+2026-02-13 13:35:03,011 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:35:14,706 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 87.8%
+2026-02-13 13:35:14,709 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:35:16,428 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:35:16,429 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:35:16,430 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 2772)
+2026-02-13 13:35:26,286 - werkzeug - INFO - 127.0.0.1 - - [13/Feb/2026 13:35:26] "[33mGET /ui HTTP/1.1[0m" 404 -
+2026-02-13 13:35:26,405 - werkzeug - INFO - 127.0.0.1 - - [13/Feb/2026 13:35:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-13 13:35:31,413 - werkzeug - INFO - 127.0.0.1 - - [13/Feb/2026 13:35:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-02-13 13:35:38,842 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 83.4%
+2026-02-13 13:35:38,843 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:35:41,321 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:35:41,322 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:35:41,325 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 2668)
+2026-02-13 13:35:47,401 - werkzeug - INFO - 127.0.0.1 - - [13/Feb/2026 13:35:47] "[33mGET /ui HTTP/1.1[0m" 404 -
+2026-02-13 13:35:47,470 - werkzeug - INFO - 127.0.0.1 - - [13/Feb/2026 13:35:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-13 13:35:51,130 - werkzeug - INFO - 127.0.0.1 - - [13/Feb/2026 13:35:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-02-13 13:35:57,742 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:35:59,688 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:36:13,125 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 85.3%
+2026-02-13 13:36:13,126 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:36:15,320 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:36:15,321 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:36:15,322 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 2668)
+2026-02-13 13:36:22,719 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:36:50,940 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:36:59,801 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:37:55,054 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:37:56,353 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:37:56,354 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:37:57,970 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:37:57,971 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:37:57,972 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 2668)
+2026-02-13 13:38:20,614 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:38:22,290 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:38:40,111 - src.modules.driver_health_manager - ERROR - Error getting crash events: string indices must be integers, not 'str'
+2026-02-13 13:38:41,459 - src.modules.performance_optimizer - ERROR - Error in monitoring loop: process no longer exists (pid=13456, name='chrome.exe')
+2026-02-13 13:38:43,125 - src.modules.driver_health_manager - ERROR - Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 13:39:00,649 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:39:40,870 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 98.8%
+2026-02-13 13:39:40,871 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:39:42,693 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:39:42,697 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:39:42,699 - src.modules.performance_optimizer - INFO - Emergency throttled chrome.exe (PID 9840)
+2026-02-13 13:39:54,458 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:39:55,739 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:40:13,250 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:40:33,095 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:40:49,618 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:40:51,842 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:40:51,904 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:40:51,918 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:40:51,978 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:40:53,173 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 93.3%
+2026-02-13 13:40:53,174 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:40:55,171 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:40:55,171 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:40:55,172 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:40:55,737 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 85.3%
+2026-02-13 13:40:55,738 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:40:57,394 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:40:57,395 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:40:57,395 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 2668)
+2026-02-13 13:41:27,820 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 84.4%
+2026-02-13 13:41:27,821 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:41:30,831 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 85.7%
+2026-02-13 13:41:30,850 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:41:32,812 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:41:32,819 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:41:32,822 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:41:32,830 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:41:32,860 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 6972)
+2026-02-13 13:41:32,861 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:41:32,862 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:41:32,864 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:41:33,050 - src.core.decision_engine - INFO - Proposed 1 actions
+2026-02-13 13:41:33,055 - src.modules.network_monitor - ERROR - Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 13:41:34,691 - src.modules.performance_optimizer - WARNING - High CPU usage detected: 100.0%
+2026-02-13 13:41:34,694 - src.modules.performance_optimizer - INFO - Performing emergency CPU optimization
+2026-02-13 13:41:35,356 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:41:35,395 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 13:41:35,444 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:41:36,051 - src.modules.thermal_controller - INFO - Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 13:41:36,096 - src.modules.thermal_controller - ERROR - Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 13:41:36,112 - src.modules.thermal_controller - INFO - Warm temperature: 70.0°C
+2026-02-13 13:41:36,178 - src.modules.thermal_controller - ERROR - Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 13:41:36,934 - src.modules.performance_optimizer - INFO - Emergency throttled Windsurf.exe (PID 6148)
+2026-02-13 13:41:36,968 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 3324)
+2026-02-13 13:41:36,999 - src.modules.performance_optimizer - INFO - Emergency throttled python.exe (PID 11820)
+2026-02-13 14:08:19,168 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 14:08:19,169 | INFO | Communication Bus initialized
+2026-02-13 14:08:19,171 | INFO | Communication Bus started
+2026-02-13 14:08:19,206 | INFO | Database tables initialized
+2026-02-13 14:08:19,208 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 14:08:19,208 | INFO | Disk Space Orchestrator initialized
+2026-02-13 14:08:19,209 | INFO | Disk Space Orchestrator started
+2026-02-13 14:08:19,211 | INFO | Network Monitor initialized
+2026-02-13 14:08:19,229 | INFO | Network Monitor started
+2026-02-13 14:08:19,229 | INFO | Performance Optimizer initialized
+2026-02-13 14:08:19,245 | INFO | Performance Optimizer started
+2026-02-13 14:08:19,245 | INFO | Security Hardener initialized
+2026-02-13 14:08:19,248 | INFO | Running security audit...
+2026-02-13 14:08:19,251 | INFO | Security Hardener started
+2026-02-13 14:08:19,252 | INFO | Update Guardian initialized
+2026-02-13 14:08:19,271 | INFO | Checking for Windows updates...
+2026-02-13 14:08:19,271 | INFO | Update Guardian started
+2026-02-13 14:08:19,280 | INFO | Driver Health Manager initialized
+2026-02-13 14:08:19,301 | INFO | Driver Health Manager started
+2026-02-13 14:08:19,302 | INFO | Forensic Analyzer initialized
+2026-02-13 14:08:19,344 | INFO | Forensic Analyzer started
+2026-02-13 14:08:19,345 | INFO | Thermal Controller initialized
+2026-02-13 14:08:19,379 | INFO | Thermal Controller started
+2026-02-13 14:08:19,379 | INFO | Power Manager initialized
+2026-02-13 14:08:19,509 | INFO | Power Manager started
+2026-02-13 14:08:19,510 | INFO | Application Curator initialized
+2026-02-13 14:08:19,579 | INFO | Application Curator started
+2026-02-13 14:08:19,579 | INFO | Registry Guardian initialized
+2026-02-13 14:08:19,654 | INFO | Starting registry scan...
+2026-02-13 14:08:19,655 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,655 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,656 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,656 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,657 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,657 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,657 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,657 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,658 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:08:19,703 | INFO | Registry Guardian started
+2026-02-13 14:08:19,704 | INFO | Backup Orchestrator initialized
+2026-02-13 14:08:19,828 | INFO | Creating backup plan...
+2026-02-13 14:08:19,853 | INFO | Backup Orchestrator started
+2026-02-13 14:08:21,556 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 14:08:22,617 | ERROR | Error analyzing crashes: Object of type AnalysisType is not JSON serializable
+2026-02-13 14:08:24,773 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 14:08:24,773 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 14:08:25,158 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 14:08:25,158 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 14:08:25,564 | WARNING | Low system stability detected (uptime: 23.3h)
+2026-02-13 14:08:25,634 | ERROR | Error analyzing system stability: Object of type AnalysisType is not JSON serializable
+2026-02-13 14:08:27,526 | INFO | 127.0.0.1 - - [13/Feb/2026 14:08:27] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 14:08:29,137 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 14:08:29,991 | WARNING | High CPU usage detected: 100.0%
+2026-02-13 14:08:29,992 | INFO | Performing emergency CPU optimization
+2026-02-13 14:08:30,104 | INFO | 127.0.0.1 - - [13/Feb/2026 14:08:30] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 14:08:32,033 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 14:08:32,065 | ERROR | Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 14:08:32,103 | INFO | Warm temperature: 70.0°C
+2026-02-13 14:08:32,113 | ERROR | Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 14:08:32,537 | INFO | Emergency throttled python.exe (PID 11472)
+2026-02-13 14:08:32,553 | INFO | Emergency throttled Code.exe (PID 6628)
+2026-02-13 14:08:34,188 | ERROR | Error checking Remote Desktop: 'NoneType' object has no attribute 'strip'
+2026-02-13 14:08:34,188 | INFO | Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 14:08:34,242 | ERROR | Error running security audit: Object of type SettingCategory is not JSON serializable
+2026-02-13 14:08:47,933 | ERROR | Error enumerating updates: Invalid isoformat string: '/Date(1648152000000)/'
+2026-02-13 14:08:47,934 | INFO | No pending updates found
+2026-02-13 14:08:48,604 | INFO | Executing backup: BACKUP_1770977328
+2026-02-13 14:08:48,607 | ERROR | Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 14:10:23,834 | ERROR | Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 14:12:43,492 | ERROR | Error checking network connections: Object of type datetime is not JSON serializable
+2026-02-13 14:13:09,501 | WARNING | High CPU usage detected: 92.3%
+2026-02-13 14:13:09,504 | INFO | Performing emergency CPU optimization
+2026-02-13 14:13:11,541 | INFO | Emergency throttled python.exe (PID 11472)
+2026-02-13 14:13:11,544 | INFO | Emergency throttled mpc-hc64.exe (PID 12632)
+2026-02-13 14:16:05,493 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 14:16:05,493 | INFO | Communication Bus initialized
+2026-02-13 14:16:05,496 | INFO | Communication Bus started
+2026-02-13 14:16:05,498 | INFO | Database tables initialized
+2026-02-13 14:16:05,498 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 14:16:05,499 | INFO | Disk Space Orchestrator initialized
+2026-02-13 14:16:05,500 | INFO | Disk Space Orchestrator started
+2026-02-13 14:16:05,501 | INFO | Network Monitor initialized
+2026-02-13 14:16:05,519 | INFO | Network Monitor started
+2026-02-13 14:16:05,519 | INFO | Performance Optimizer initialized
+2026-02-13 14:16:05,523 | INFO | Performance Optimizer started
+2026-02-13 14:16:05,524 | INFO | Security Hardener initialized
+2026-02-13 14:16:05,527 | INFO | Running security audit...
+2026-02-13 14:16:05,527 | INFO | Security Hardener started
+2026-02-13 14:16:05,528 | INFO | Update Guardian initialized
+2026-02-13 14:16:05,532 | INFO | Checking for Windows updates...
+2026-02-13 14:16:05,533 | INFO | Update Guardian started
+2026-02-13 14:16:05,533 | INFO | Driver Health Manager initialized
+2026-02-13 14:16:05,548 | INFO | Driver Health Manager started
+2026-02-13 14:16:05,549 | INFO | Forensic Analyzer initialized
+2026-02-13 14:16:05,582 | INFO | Forensic Analyzer started
+2026-02-13 14:16:05,583 | INFO | Thermal Controller initialized
+2026-02-13 14:16:05,786 | INFO | Thermal Controller started
+2026-02-13 14:16:05,786 | INFO | Power Manager initialized
+2026-02-13 14:16:05,849 | INFO | Power Manager started
+2026-02-13 14:16:05,850 | INFO | Application Curator initialized
+2026-02-13 14:16:05,937 | INFO | Application Curator started
+2026-02-13 14:16:05,977 | INFO | Registry Guardian initialized
+2026-02-13 14:16:06,110 | INFO | Starting registry scan...
+2026-02-13 14:16:06,145 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,145 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,146 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,146 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,146 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,146 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,145 | INFO | Registry Guardian started
+2026-02-13 14:16:06,146 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,147 | INFO | Backup Orchestrator initialized
+2026-02-13 14:16:06,147 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,185 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 14:16:06,363 | INFO | Creating backup plan...
+2026-02-13 14:16:06,363 | INFO | Backup Orchestrator started
+2026-02-13 14:16:07,328 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 14:16:08,058 | ERROR | Error analyzing crashes: Object of type AnalysisType is not JSON serializable
+2026-02-13 14:16:09,307 | WARNING | Low system stability detected (uptime: 23.5h)
+2026-02-13 14:16:09,351 | ERROR | Error analyzing system stability: Object of type AnalysisType is not JSON serializable
+2026-02-13 14:16:09,635 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 14:16:09,635 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 14:16:09,763 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 14:16:09,777 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 14:16:13,851 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 14:16:14,268 | INFO | 127.0.0.1 - - [13/Feb/2026 14:16:14] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 14:16:14,670 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 14:16:14,817 | ERROR | Error executing cooling action: Object of type ComponentType is not JSON serializable
+2026-02-13 14:16:14,818 | INFO | Warm temperature: 70.0°C
+2026-02-13 14:16:14,929 | ERROR | Error in monitoring loop: Object of type ThermalStatus is not JSON serializable
+2026-02-13 14:16:15,677 | WARNING | High CPU usage detected: 100.0%
+2026-02-13 14:16:15,678 | INFO | Performing emergency CPU optimization
+2026-02-13 14:16:16,643 | INFO | 127.0.0.1 - - [13/Feb/2026 14:16:16] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 14:16:17,044 | ERROR | Error checking Remote Desktop: 'NoneType' object has no attribute 'strip'
+2026-02-13 14:16:17,045 | INFO | Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 14:16:17,131 | ERROR | Error running security audit: Object of type SettingCategory is not JSON serializable
+2026-02-13 14:16:18,014 | INFO | Emergency throttled python.exe (PID 4788)
+2026-02-13 14:16:18,031 | INFO | Emergency throttled Code.exe (PID 6628)
+2026-02-13 14:16:30,277 | ERROR | Error enumerating updates: Invalid isoformat string: '/Date(1648152000000)/'
+2026-02-13 14:16:30,277 | INFO | No pending updates found
+2026-02-13 14:16:32,142 | INFO | Executing backup: BACKUP_1770977792
+2026-02-13 14:16:32,145 | ERROR | Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 16:40:03,120 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 16:40:03,121 | INFO | Communication Bus initialized
+2026-02-13 16:40:03,124 | INFO | Communication Bus started
+2026-02-13 16:40:03,128 | INFO | Database tables initialized
+2026-02-13 16:40:03,129 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 16:40:03,129 | INFO | Disk Space Orchestrator initialized
+2026-02-13 16:40:03,132 | INFO | Disk Space Orchestrator started
+2026-02-13 16:40:03,133 | INFO | Network Monitor initialized
+2026-02-13 16:40:03,150 | INFO | Network Monitor started
+2026-02-13 16:40:03,153 | INFO | Performance Optimizer initialized
+2026-02-13 16:40:03,154 | INFO | Performance Optimizer started
+2026-02-13 16:40:03,155 | INFO | Security Hardener initialized
+2026-02-13 16:40:03,156 | INFO | Running security audit...
+2026-02-13 16:40:03,156 | INFO | Security Hardener started
+2026-02-13 16:40:03,162 | INFO | Update Guardian initialized
+2026-02-13 16:40:03,166 | INFO | Checking for Windows updates...
+2026-02-13 16:40:03,168 | INFO | Update Guardian started
+2026-02-13 16:40:03,170 | INFO | Driver Health Manager initialized
+2026-02-13 16:40:03,173 | INFO | Driver Health Manager started
+2026-02-13 16:40:03,173 | INFO | Forensic Analyzer initialized
+2026-02-13 16:40:03,184 | INFO | Forensic Analyzer started
+2026-02-13 16:40:03,185 | INFO | Thermal Controller initialized
+2026-02-13 16:40:03,261 | INFO | Thermal Controller started
+2026-02-13 16:40:03,262 | INFO | Power Manager initialized
+2026-02-13 16:40:03,312 | INFO | Power Manager started
+2026-02-13 16:40:03,317 | INFO | Application Curator initialized
+2026-02-13 16:40:03,361 | INFO | Application Curator started
+2026-02-13 16:40:03,361 | INFO | Registry Guardian initialized
+2026-02-13 16:40:03,540 | INFO | Starting registry scan...
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,541 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,542 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,542 | ERROR | Error enumerating registry keys: name 'path' is not defined
+2026-02-13 16:40:03,542 | INFO | Registry Guardian started
+2026-02-13 16:40:03,543 | INFO | Backup Orchestrator initialized
+2026-02-13 16:40:03,638 | INFO | Creating backup plan...
+2026-02-13 16:40:03,639 | INFO | Backup Orchestrator started
+2026-02-13 16:40:04,845 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 16:40:06,477 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 16:40:06,477 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 16:40:06,702 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 16:40:06,702 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 16:40:09,104 | ERROR | Error analyzing crashes: Object of type AnalysisType is not JSON serializable
+2026-02-13 16:40:11,241 | INFO | 127.0.0.1 - - [13/Feb/2026 16:40:11] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 16:40:13,771 | INFO | 127.0.0.1 - - [13/Feb/2026 16:40:13] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 17:02:39,941 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 17:02:39,944 | INFO | Communication Bus initialized
+2026-02-13 17:02:39,947 | INFO | Communication Bus started
+2026-02-13 17:02:39,950 | INFO | Database tables initialized
+2026-02-13 17:02:39,951 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 17:02:39,951 | INFO | Disk Space Orchestrator initialized
+2026-02-13 17:02:39,954 | INFO | Disk Space Orchestrator started
+2026-02-13 17:02:39,954 | INFO | Network Monitor initialized
+2026-02-13 17:02:39,963 | INFO | Network Monitor started
+2026-02-13 17:02:39,964 | INFO | Performance Optimizer initialized
+2026-02-13 17:02:39,971 | INFO | Performance Optimizer started
+2026-02-13 17:02:39,971 | INFO | Security Hardener initialized
+2026-02-13 17:02:39,976 | INFO | Running security audit...
+2026-02-13 17:02:39,976 | INFO | Security Hardener started
+2026-02-13 17:02:39,980 | INFO | Update Guardian initialized
+2026-02-13 17:02:39,989 | INFO | Checking for Windows updates...
+2026-02-13 17:02:39,989 | INFO | Update Guardian started
+2026-02-13 17:02:39,994 | INFO | Driver Health Manager initialized
+2026-02-13 17:02:40,019 | INFO | Driver Health Manager started
+2026-02-13 17:02:40,023 | INFO | Forensic Analyzer initialized
+2026-02-13 17:02:40,065 | INFO | Forensic Analyzer started
+2026-02-13 17:02:40,065 | INFO | Thermal Controller initialized
+2026-02-13 17:02:40,119 | INFO | Thermal Controller started
+2026-02-13 17:02:40,119 | INFO | Power Manager initialized
+2026-02-13 17:02:40,164 | INFO | Power Manager started
+2026-02-13 17:02:40,164 | INFO | Application Curator initialized
+2026-02-13 17:02:40,239 | INFO | Application Curator started
+2026-02-13 17:02:40,261 | INFO | Registry Guardian initialized
+2026-02-13 17:02:40,396 | INFO | Starting registry scan...
+2026-02-13 17:02:40,396 | INFO | Registry Guardian started
+2026-02-13 17:02:40,397 | INFO | Backup Orchestrator initialized
+2026-02-13 17:02:40,603 | INFO | Creating backup plan...
+2026-02-13 17:02:40,604 | INFO | Backup Orchestrator started
+2026-02-13 17:02:43,057 | WARNING | Critical forensic finding: Service Crash: Server
+2026-02-13 17:02:44,287 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 17:02:44,301 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 17:02:44,301 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 17:02:44,301 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 17:02:45,071 | WARNING | Low system stability detected (uptime: 26.2h)
+2026-02-13 17:02:49,258 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 17:02:49,376 | INFO | Warm temperature: 70.0°C
+2026-02-13 17:02:50,139 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 17:02:50,657 | WARNING | High CPU usage detected: 100.0%
+2026-02-13 17:02:50,657 | INFO | Performing emergency CPU optimization
+2026-02-13 17:02:52,312 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 17:02:52,881 | INFO | Emergency throttled python.exe (PID 2876)
+2026-02-13 17:02:52,902 | ERROR | Error checking Remote Desktop: 'NoneType' object has no attribute 'strip'
+2026-02-13 17:02:52,905 | INFO | Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 17:54:39,450 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 17:54:39,452 | INFO | Communication Bus initialized
+2026-02-13 17:54:39,455 | INFO | Communication Bus started
+2026-02-13 17:54:39,458 | INFO | Database tables initialized
+2026-02-13 17:54:39,458 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 17:54:39,459 | INFO | Disk Space Orchestrator initialized
+2026-02-13 17:54:39,460 | INFO | Disk Space Orchestrator started
+2026-02-13 17:54:39,464 | INFO | Network Monitor initialized
+2026-02-13 17:54:39,477 | INFO | Network Monitor started
+2026-02-13 17:54:39,478 | INFO | Performance Optimizer initialized
+2026-02-13 17:54:39,483 | INFO | Performance Optimizer started
+2026-02-13 17:54:39,484 | INFO | Security Hardener initialized
+2026-02-13 17:54:39,488 | INFO | Running security audit...
+2026-02-13 17:54:39,488 | INFO | Security Hardener started
+2026-02-13 17:54:39,489 | INFO | Update Guardian initialized
+2026-02-13 17:54:39,501 | INFO | Checking for Windows updates...
+2026-02-13 17:54:39,501 | INFO | Update Guardian started
+2026-02-13 17:54:39,505 | INFO | Driver Health Manager initialized
+2026-02-13 17:54:39,527 | INFO | Driver Health Manager started
+2026-02-13 17:54:39,528 | INFO | Forensic Analyzer initialized
+2026-02-13 17:54:39,568 | INFO | Forensic Analyzer started
+2026-02-13 17:54:39,571 | INFO | Thermal Controller initialized
+2026-02-13 17:54:39,601 | INFO | Thermal Controller started
+2026-02-13 17:54:39,601 | INFO | Power Manager initialized
+2026-02-13 17:54:39,652 | INFO | Power Manager started
+2026-02-13 17:54:39,652 | INFO | Application Curator initialized
+2026-02-13 17:54:39,703 | INFO | Application Curator started
+2026-02-13 17:54:39,703 | INFO | Registry Guardian initialized
+2026-02-13 17:54:39,795 | INFO | Starting registry scan...
+2026-02-13 17:54:39,850 | INFO | Registry Guardian started
+2026-02-13 17:54:39,930 | INFO | Backup Orchestrator initialized
+2026-02-13 17:54:40,184 | INFO | Creating backup plan...
+2026-02-13 17:54:40,184 | INFO | Backup Orchestrator started
+2026-02-13 17:54:42,754 | WARNING | Critical forensic finding: Service Crash: Server
+2026-02-13 17:54:43,521 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 17:54:43,521 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 17:54:43,573 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 17:54:43,573 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 17:54:44,273 | WARNING | Low system stability detected (uptime: 27.1h)
+2026-02-13 17:54:48,647 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 17:54:48,793 | INFO | Warm temperature: 70.0°C
+2026-02-13 17:54:49,557 | WARNING | High CPU usage detected: 100.0%
+2026-02-13 17:54:49,557 | INFO | Performing emergency CPU optimization
+2026-02-13 17:54:49,618 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 17:54:51,089 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 17:54:51,924 | INFO | Emergency throttled python.exe (PID 13976)
+2026-02-13 17:54:51,924 | INFO | Security audit complete: 75.0% (3/4 checks passed)
+2026-02-13 17:54:51,929 | INFO | Emergency throttled Code.exe (PID 6628)
+2026-02-13 18:14:14,251 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 18:14:14,253 | INFO | Communication Bus initialized
+2026-02-13 18:14:14,256 | INFO | Communication Bus started
+2026-02-13 18:14:14,260 | INFO | Database tables initialized
+2026-02-13 18:14:14,260 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 18:14:14,260 | INFO | Disk Space Orchestrator initialized
+2026-02-13 18:14:14,262 | INFO | Disk Space Orchestrator started
+2026-02-13 18:14:14,264 | INFO | Network Monitor initialized
+2026-02-13 18:14:14,270 | INFO | Network Monitor started
+2026-02-13 18:14:14,271 | INFO | Performance Optimizer initialized
+2026-02-13 18:14:14,276 | INFO | Performance Optimizer started
+2026-02-13 18:14:14,277 | INFO | Security Hardener initialized
+2026-02-13 18:14:14,282 | INFO | Running security audit...
+2026-02-13 18:14:14,282 | INFO | Security Hardener started
+2026-02-13 18:14:14,285 | INFO | Update Guardian initialized
+2026-02-13 18:14:14,290 | INFO | Checking for Windows updates...
+2026-02-13 18:14:14,293 | INFO | Update Guardian started
+2026-02-13 18:14:14,293 | INFO | Driver Health Manager initialized
+2026-02-13 18:14:14,310 | INFO | Driver Health Manager started
+2026-02-13 18:14:14,311 | INFO | Forensic Analyzer initialized
+2026-02-13 18:14:14,334 | INFO | Forensic Analyzer started
+2026-02-13 18:14:14,335 | INFO | Thermal Controller initialized
+2026-02-13 18:14:14,390 | INFO | Thermal Controller started
+2026-02-13 18:14:14,390 | INFO | Power Manager initialized
+2026-02-13 18:14:14,423 | INFO | Power Manager started
+2026-02-13 18:14:14,423 | INFO | Application Curator initialized
+2026-02-13 18:14:14,553 | INFO | Application Curator started
+2026-02-13 18:14:14,629 | INFO | Registry Guardian initialized
+2026-02-13 18:14:14,714 | INFO | Starting registry scan...
+2026-02-13 18:14:14,797 | INFO | Registry Guardian started
+2026-02-13 18:14:14,800 | INFO | Backup Orchestrator initialized
+2026-02-13 18:14:14,987 | INFO | Creating backup plan...
+2026-02-13 18:14:15,055 | INFO | Backup Orchestrator started
+2026-02-13 18:14:16,750 | WARNING | Critical forensic finding: Service Crash: Server
+2026-02-13 18:14:18,168 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 18:14:18,168 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 18:14:18,170 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 18:14:18,206 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 18:14:18,771 | WARNING | Low system stability detected (uptime: 27.4h)
+2026-02-13 18:14:23,290 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 18:14:23,353 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 18:14:23,431 | INFO | Warm temperature: 70.0°C
+2026-02-13 18:14:23,806 | WARNING | High CPU usage detected: 100.0%
+2026-02-13 18:14:23,806 | INFO | Performing emergency CPU optimization
+2026-02-13 18:14:25,381 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 18:14:25,509 | INFO | Security audit complete: 75.0% (3/4 checks passed)
+2026-02-13 18:14:25,710 | INFO | Emergency throttled Code.exe (PID 6628)
+2026-02-13 18:14:25,713 | INFO | Emergency throttled python.exe (PID 12436)
+2026-02-14 01:13:06,345 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-14 01:13:06,443 | INFO | Communication Bus initialized
+2026-02-14 01:13:06,539 | INFO | Communication Bus started
+2026-02-14 01:13:06,571 | INFO | Database tables initialized
+2026-02-14 01:13:06,596 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-14 01:13:06,607 | INFO | Disk Space Orchestrator initialized
+2026-02-14 01:13:06,657 | INFO | Disk Space Orchestrator started
+2026-02-14 01:13:06,671 | INFO | Network Monitor initialized
+2026-02-14 01:13:06,732 | INFO | Network Monitor started
+2026-02-14 01:13:06,743 | INFO | Performance Optimizer initialized
+2026-02-14 01:13:06,772 | INFO | Performance Optimizer started
+2026-02-14 01:13:06,780 | INFO | Security Hardener initialized
+2026-02-14 01:13:06,837 | INFO | Running security audit...
+2026-02-14 01:13:06,843 | INFO | Security Hardener started
+2026-02-14 01:13:07,121 | INFO | Update Guardian initialized
+2026-02-14 01:13:07,471 | INFO | Checking for Windows updates...
+2026-02-14 01:13:07,474 | INFO | Update Guardian started
+2026-02-14 01:13:07,824 | INFO | Driver Health Manager initialized
+2026-02-14 01:13:08,653 | INFO | Driver Health Manager started
+2026-02-14 01:13:08,772 | INFO | Forensic Analyzer initialized
+2026-02-14 01:13:09,093 | INFO | Forensic Analyzer started
+2026-02-14 01:13:09,305 | INFO | Thermal Controller initialized
+2026-02-14 01:13:10,357 | INFO | Thermal Controller started
+2026-02-14 01:13:10,774 | INFO | Power Manager initialized
+2026-02-14 01:13:11,079 | INFO | Power Manager started
+2026-02-14 01:13:11,172 | INFO | Application Curator initialized
+2026-02-14 01:13:11,971 | INFO | Application Curator started
+2026-02-14 01:13:14,949 | INFO | Registry Guardian initialized
+2026-02-14 01:13:16,372 | INFO | Starting registry scan...
+2026-02-14 01:13:16,372 | INFO | Registry Guardian started
+2026-02-14 01:13:17,082 | ERROR | Error getting power mode: Command '['powershell', '-Command', '\n            powercfg /getactivescheme\n            ']' timed out after 5 seconds
+2026-02-14 01:13:17,470 | INFO | Backup Orchestrator initialized
+2026-02-14 01:13:21,437 | INFO | Creating backup plan...
+2026-02-14 01:13:21,563 | INFO | Backup Orchestrator started
+2026-02-14 01:13:36,184 | WARNING | High CPU usage detected: 100.0%
+2026-02-14 01:13:36,366 | INFO | Performing emergency CPU optimization
+2026-02-14 01:13:38,024 | ERROR | Error enumerating services: Command '['powershell', '-Command', '\n            Get-Service | Select-Object Name, DisplayName, Status, StartType | ConvertTo-Json\n            ']' timed out after 30 seconds
+2026-02-14 01:13:39,675 | ERROR | Error getting crash events: Command '['powershell', '-Command', "\n            Get-WinEvent -FilterHashtable @{\n                LogName='System'\n                ProviderName='Microsoft-Windows-Kernel-Power'\n                ID=41\n            } -MaxEvents 10 | Select-Object TimeCreated, Message | ConvertTo-Json\n            "]' timed out after 30 seconds
+2026-02-14 01:13:40,192 | ERROR | Error getting crash events: Command '['powershell', '-Command', "\n            Get-WinEvent -FilterHashtable @{\n                LogName='System'\n                Level=1,2  # Critical, Error\n            } -MaxEvents 20 | \n            Select-Object Id, LevelDisplayName, ProviderName, TimeCreated, Message |\n            ConvertTo-Json\n            "]' timed out after 30 seconds
+2026-02-14 01:13:46,097 | WARNING | Low system stability detected (uptime: 34.4h)
+2026-02-14 01:13:52,181 | INFO | Emergency throttled python.exe (PID 11512)
+2026-02-14 01:13:52,366 | INFO | Emergency throttled node.exe (PID 4168)
+2026-02-14 01:13:52,373 | WARNING | Low memory detected: 279MB available
+2026-02-14 01:13:52,382 | INFO | Performing emergency memory optimization
+2026-02-14 01:14:15,208 | ERROR | Error getting installed applications: Command '['powershell', '-Command', '\n            $apps = @()\n            \n            # Get from Uninstall registry keys\n            $paths = @(\n                "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*",\n                "HKLM:\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*",\n                "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*"\n            )\n            \n            foreach ($path in $paths) {\n                $items = Get-ItemProperty $path -ErrorAction SilentlyContinue\n                foreach ($item in $items) {\n                    if ($item.DisplayName -and $item.DisplayName -notmatch "^Update for|^Security Update") {\n                        $app = @{\n                            Name = $item.PSChildName\n                            DisplayName = $item.DisplayName\n                            Version = $item.DisplayVersion\n                            Publisher = $item.Publisher\n                            InstallDate = $item.InstallDate\n                            InstallLocation = $item.InstallLocation\n                            UninstallString = $item.UninstallString\n                            EstimatedSizeMB = if ($item.EstimatedSize) { [math]::Round($item.EstimatedSize / 1024, 2) } else { 0 }\n                        }\n                        $apps += $app\n                    }\n                }\n            }\n            \n            $apps | ConvertTo-Json\n            ']' timed out after 30 seconds
+2026-02-14 01:14:48,903 | ERROR | Error enumerating drivers: Command '['powershell', '-Command', '\n            Get-WmiObject Win32_PnPSignedDriver | \n            Where-Object {$_.DeviceName -ne $null} |\n            Select-Object DeviceName, DriverName, DriverVersion, DriverDate, DeviceClass, Manufacturer, DeviceID, HardwareID |\n            ConvertTo-Json\n            ']' timed out after 30 seconds
+2026-02-14 01:15:58,094 | WARNING | Windows Update query timed out after 120s
+2026-02-14 01:16:27,745 | ERROR | Error enumerating registry keys: Command '['powershell', '-Command', '\n            $path = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"\n            $items = Get-ItemProperty -Path "Registry::$path" -ErrorAction SilentlyContinue\n            \n            if ($items) {\n                $entries = @()\n                $items.PSObject.Properties | Where-Object {$_.Name -notmatch \'^PS\'} | ForEach-Object {\n                    $val = if ($null -eq $_.Value) { "" } else { [string]$_.Value }\n                    $entries += @{\n                        Path = $path\n                        Name = $_.Name\n                        Value = $val\n                        Type = "String"\n                    }\n                }\n                $entries | ConvertTo-Json\n            } else {\n                "[]"\n            }\n            ']' timed out after 60 seconds
+2026-02-14 01:16:27,756 | INFO | No pending updates found
+2026-02-14 01:16:27,771 | ERROR | Error getting power mode: Command '['powershell', '-Command', '\n            powercfg /getactivescheme\n            ']' timed out after 5 seconds
+2026-02-14 01:19:05,702 | ERROR | Error getting user accounts: Command '['powershell', '-Command', '\n            Get-LocalUser | Select-Object Name, Enabled, PasswordRequired, PasswordChangeableDate | ConvertTo-Json\n            ']' timed out after 30 seconds
+2026-02-14 01:20:07,449 | ERROR | Error in monitoring loop: process no longer exists (pid=5584, name='Trae.exe')
+2026-02-14 01:20:30,028 | ERROR | Error enumerating registry keys: Command '['powershell', '-Command', '\n            $path = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce"\n            $items = Get-ItemProperty -Path "Registry::$path" -ErrorAction SilentlyContinue\n            \n            if ($items) {\n                $entries = @()\n                $items.PSObject.Properties | Where-Object {$_.Name -notmatch \'^PS\'} | ForEach-Object {\n                    $val = if ($null -eq $_.Value) { "" } else { [string]$_.Value }\n                    $entries += @{\n                        Path = $path\n                        Name = $_.Name\n                        Value = $val\n                        Type = "String"\n                    }\n                }\n                $entries | ConvertTo-Json\n            } else {\n                "[]"\n            }\n            ']' timed out after 60 seconds

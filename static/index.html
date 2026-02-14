@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOUX OS Guardian Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; }
+        .dashboard { max-width: 800px; margin: 20px auto; }
+        .panel { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .status { font-weight: bold; }
+        .healthy { color: green; }
+        .warning { color: orange; }
+        .critical { color: red; }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>KNOUX OS Guardian Premium Dashboard</h1>
+        <div class="panel">
+            <h2>System Status</h2>
+            <p>CPU: <span id="cpu">--</span>%</p>
+            <p>RAM: <span id="ram">--</span>%</p>
+            <p>Disk: <span id="disk">--</span>%</p>
+        </div>
+        <div class="panel">
+            <h2>Network Status</h2>
+            <p>Connections: <span id="connections">--</span></p>
+        </div>
+        <div class="panel">
+            <h2>Modules Status</h2>
+            <p>Total: <span id="total_modules">--</span></p>
+            <p>Healthy: <span id="healthy_modules">--</span></p>
+        </div>
+        <div class="panel">
+            <h2>Security Alerts</h2>
+            <p>High: <span id="high_alerts">--</span></p>
+            <p>Info: <span id="info_alerts">--</span></p>
+        </div>
+        <div class="panel">
+            <h2>Overall Readiness</h2>
+            <p class="status">Readiness: <span id="readiness">--</span>%</p>
+        </div>
+    </div>
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('/');
+                const data = await response.json();
+                document.getElementById('cpu').textContent = data.system_status.cpu_percent;
+                document.getElementById('ram').textContent = data.system_status.memory_percent;
+                document.getElementById('disk').textContent = data.system_status.disk_percent;
+                document.getElementById('connections').textContent = data.network_status.established_connections;
+                document.getElementById('total_modules').textContent = data.modules_status.total_modules;
+                document.getElementById('healthy_modules').textContent = data.modules_status.healthy_modules;
+                document.getElementById('high_alerts').textContent = data.security_alerts.high;
+                document.getElementById('info_alerts').textContent = data.security_alerts.info;
+                document.getElementById('readiness').textContent = data.overall_readiness_percent;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+        fetchData();
+        setInterval(fetchData, 5000); // Update every 5 seconds
+    </script>
+</body>
+</html>

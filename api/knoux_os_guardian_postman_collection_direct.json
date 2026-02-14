@@ -1,0 +1,1228 @@
+{
+    "info": {
+        "name": "KNOUX OS Guardian - Complete API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": "Complete Postman collection for all 12 KNOUX OS Guardian modules with RBAC, async execution, and audit verification",
+        "version": "1.0.0"
+    },
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "{{access_token}}",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000",
+            "type": "string"
+        },
+        {
+            "key": "access_token",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "key": "lastAsyncRunId",
+            "value": "",
+            "type": "string"
+        }
+    ],
+    "item": [
+        {
+            "name": "Authentication",
+            "item": [
+                {
+                    "name": "Login - Admin",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('Response has access token', function() {",
+                                    "    pm.expect(pm.response.json()).to.have.property('access_token');",
+                                    "    pm.expect(pm.response.json().access_token).to.be.a('string');",
+                                    "    pm.environment.set('access_token', pm.response.json().access_token);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Login - Analyst",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"username\": \"analyst\",\n  \"password\": \"analyst123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Login - Viewer",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"username\": \"viewer\",\n  \"password\": \"viewer123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Health & System",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/health",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "health"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('System is healthy', function() {",
+                                    "    pm.expect(pm.response.json()).to.have.property('status', 'healthy');",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "List All Modules",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('Returns 12 modules', function() {",
+                                    "    pm.expect(pm.response.json()).to.be.an('array');",
+                                    "    pm.expect(pm.response.json()).to.have.lengthOf(12);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "DiskSpaceOrchestrator",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DiskSpaceOrchestrator/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DiskSpaceOrchestrator",
+                                "status"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('Module status has required fields', function() {",
+                                    "    const json = pm.response.json();",
+                                    "    pm.expect(json).to.have.property('module_name', 'DiskSpaceOrchestrator');",
+                                    "    pm.expect(json).to.have.property('enabled');",
+                                    "    pm.expect(json).to.have.property('status');",
+                                    "    pm.expect(json).to.have.property('health_score');",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"volumes\": [\"C:\", \"D:\"],\n    \"threshold_percent\": 20,\n    \"simulate_cleanup\": true\n  },\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DiskSpaceOrchestrator/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DiskSpaceOrchestrator",
+                                "execute"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('Execution response has required fields', function() {",
+                                    "    const json = pm.response.json();",
+                                    "    pm.expect(json).to.have.property('run_id');",
+                                    "    pm.expect(json).to.have.property('status', 'completed');",
+                                    "    pm.expect(json).to.have.property('run_mode', 'immediate');",
+                                    "    pm.expect(json).to.have.property('severity');",
+                                    "    pm.expect(json).to.have.property('details');",
+                                    "    pm.expect(json.details).to.have.property('volumes');",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Execute - Async",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"async\",\n  \"parameters\": {\n    \"volumes\": [\"C:\", \"D:\", \"E:\"],\n    \"threshold_percent\": 15,\n    \"simulate_cleanup\": false\n  },\n  \"priority\": \"high\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DiskSpaceOrchestrator/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DiskSpaceOrchestrator",
+                                "execute"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 202', function() {",
+                                    "    pm.response.to.have.status(202);",
+                                    "});",
+                                    "",
+                                    "pm.test('Async execution scheduled', function() {",
+                                    "    const json = pm.response.json();",
+                                    "    pm.expect(json).to.have.property('run_id');",
+                                    "    pm.expect(json).to.have.property('status', 'running');",
+                                    "    pm.expect(json).to.have.property('run_mode', 'async');",
+                                    "    pm.environment.set('lastAsyncRunId', json.run_id);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Specialized Scan",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"deep_scan\": true,\n    \"analyze_file_types\": true,\n    \"generate_report\": true\n  },\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DiskSpaceOrchestrator/scan",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DiskSpaceOrchestrator",
+                                "scan"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "NetworkMonitor",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/NetworkMonitor/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "NetworkMonitor",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"duration_seconds\": 60,\n    \"analyze_connections\": true,\n    \"privacy_mode\": \"strict\"\n  },\n  \"priority\": \"high\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/NetworkMonitor/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "NetworkMonitor",
+                                "execute"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Specialized Analyze",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"async\",\n  \"parameters\": {\n    \"duration_seconds\": 300,\n    \"capture_packets\": false,\n    \"detect_malware\": true,\n    \"privacy_leak_detection\": true\n  },\n  \"priority\": \"critical\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/NetworkMonitor/analyze",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "NetworkMonitor",
+                                "analyze"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "SecurityHardener",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/SecurityHardener/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "SecurityHardener",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate (Admin Only)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"cis_profile\": \"enterprise\",\n    \"remediate_automatically\": false,\n    \"scan_registry\": true\n  },\n  \"priority\": \"critical\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/SecurityHardener/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "SecurityHardener",
+                                "execute"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Specialized Harden (Admin Only)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"apply_firewall_rules\": true,\n    \"harden_user_accounts\": true,\n    \"disable_unnecessary_services\": true\n  },\n  \"priority\": \"critical\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/SecurityHardener/harden",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "SecurityHardener",
+                                "harden"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "PerformanceOptimizer",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/PerformanceOptimizer/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "PerformanceOptimizer",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Async",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"async\",\n  \"parameters\": {\n    \"optimize_memory\": true,\n    \"optimize_cpu\": true,\n    \"clean_temp_files\": true,\n    \"defragment_drives\": false\n  },\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/PerformanceOptimizer/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "PerformanceOptimizer",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "UpdateGuardian",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/UpdateGuardian/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "UpdateGuardian",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"check_updates\": true,\n    \"assess_risks\": true,\n    \"deploy_strategy\": \"review_first\"\n  },\n  \"priority\": \"high\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/UpdateGuardian/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "UpdateGuardian",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "DriverHealthManager",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DriverHealthManager/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DriverHealthManager",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"scan_all_drivers\": true,\n    \"check_crashes\": true,\n    \"driver_categories\": [\"display\", \"network\", \"storage\"]\n  },\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DriverHealthManager/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DriverHealthManager",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ForensicAnalyzer",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/ForensicAnalyzer/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "ForensicAnalyzer",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Async",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"async\",\n  \"parameters\": {\n    \"time_range_hours\": 24,\n    \"analyze_bsod\": true,\n    \"analyze_crashes\": true,\n    \"root_cause_depth\": \"deep\"\n  },\n  \"priority\": \"critical\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/ForensicAnalyzer/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "ForensicAnalyzer",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ThermalController",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/ThermalController/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "ThermalController",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"monitor_interval_seconds\": 30,\n    \"critical_temp_celsius\": 90,\n    \"control_fans\": true\n  },\n  \"priority\": \"high\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/ThermalController/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "ThermalController",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "PowerManager",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/PowerManager/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "PowerManager",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"power_plan\": \"balanced\",\n    \"optimize_battery\": true,\n    \"screen_timeout_minutes\": 10\n  },\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/PowerManager/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "PowerManager",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ApplicationCurator",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/ApplicationCurator/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "ApplicationCurator",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Async",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"async\",\n  \"parameters\": {\n    \"scan_abandoned_days\": 90,\n    \"scan_idle_days\": 30,\n    \"suggest_removals\": true,\n    \"categories\": [\"toolbars\", \"trialware\"]\n  },\n  \"priority\": \"low\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/ApplicationCurator/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "ApplicationCurator",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "RegistryGuardian",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/RegistryGuardian/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "RegistryGuardian",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Immediate",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {\n    \"scan_hives\": [\"HKLM\", \"HKCU\"],\n    \"detect_malware\": true,\n    \"backup_before_changes\": true\n  },\n  \"priority\": \"high\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/RegistryGuardian/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "RegistryGuardian",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "BackupOrchestrator",
+            "item": [
+                {
+                    "name": "Get Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/BackupOrchestrator/status",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "BackupOrchestrator",
+                                "status"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Execute - Async",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"async\",\n  \"parameters\": {\n    \"backup_type\": \"incremental\",\n    \"include_folders\": [\"C:\\\\Users\", \"C:\\\\Documents\"],\n    \"compression\": true,\n    \"destination\": \"D:\\\\Backups\"\n  },\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/BackupOrchestrator/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "BackupOrchestrator",
+                                "execute"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Audit & Monitoring",
+            "item": [
+                {
+                    "name": "Get Audit Logs",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/audit/logs",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "audit",
+                                "logs"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Status code is 200', function() {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test('Audit has required structure', function() {",
+                                    "    const json = pm.response.json();",
+                                    "    pm.expect(json).to.have.property('items');",
+                                    "    pm.expect(json.items).to.be.an('array');",
+                                    "    if (json.items.length > 0) {",
+                                    "        const audit = json.items[0];",
+                                    "        pm.expect(audit).to.have.property('audit_id');",
+                                    "        pm.expect(audit).to.have.property('module_name');",
+                                    "        pm.expect(audit).to.have.property('action');",
+                                    "        pm.expect(audit.metadata).to.have.property('source_ip');",
+                                    "    }",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Async Task Status",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/async/tasks/{{lastAsyncRunId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "async",
+                                "tasks",
+                                "{{lastAsyncRunId}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get Execution Result",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DiskSpaceOrchestrator/runs/{{lastAsyncRunId}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DiskSpaceOrchestrator",
+                                "runs",
+                                "{{lastAsyncRunId}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "RBAC Tests",
+            "item": [
+                {
+                    "name": "Viewer tries to execute (should fail)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {},\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/DiskSpaceOrchestrator/execute",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "DiskSpaceOrchestrator",
+                                "execute"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Viewer gets 403 for execute', function() {",
+                                    "    pm.response.to.have.status(403);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Analyst tries SecurityHardener/harden (should fail)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"run_mode\": \"immediate\",\n  \"parameters\": {},\n  \"priority\": \"normal\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/v1/modules/SecurityHardener/harden",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "modules",
+                                "SecurityHardener",
+                                "harden"
+                            ]
+                        }
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test('Analyst gets 403 for admin-only endpoint', function() {",
+                                    "    pm.response.to.have.status(403);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "exec": [
+                    "// Set default headers",
+                    "pm.request.headers.add({",
+                    "    key: 'User-Agent',",
+                    "    value: 'KNOUX-OS-Guardian-Postman/1.0.0'",
+                    "});"
+                ],
+                "type": "text/javascript"
+            }
+        }
+    ]
+}

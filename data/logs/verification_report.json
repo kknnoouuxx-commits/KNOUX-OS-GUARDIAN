@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-02-13T18:14:27.741220+04:00",
+  "module_health": [
+    {
+      "module": "DiskSpaceOrchestrator",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.264311+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "NetworkMonitor",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.271310+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "PerformanceOptimizer",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.276313+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "SecurityHardener",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.284314+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "UpdateGuardian",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.293310+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "DriverHealthManager",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.310312+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "ForensicAnalyzer",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.334311+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "ThermalController",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.390310+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "PowerManager",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.423312+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "ApplicationCurator",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.629311+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "RegistryGuardian",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:14.800315+04:00",
+      "active": true,
+      "self_test": "passed"
+    },
+    {
+      "module": "BackupOrchestrator",
+      "status": "healthy",
+      "errors": 0,
+      "last_run": "2026-02-13T18:14:15.179921+04:00",
+      "active": true,
+      "self_test": "passed"
+    }
+  ],
+  "system_health": {
+    "cpu_percent": 100.0,
+    "ram_percent": 89.4,
+    "disk_percent": 65.8,
+    "cpu_ok": false,
+    "ram_ok": false,
+    "disk_ok": true
+  },
+  "network": {
+    "total_connections": 122,
+    "anomalies": 0,
+    "stable": true
+  },
+  "ui": {
+    "folder": "F:\\KNOUX_OS_Guardian\\ui",
+    "files": {
+      "folder": "F:\\KNOUX_OS_Guardian\\ui",
+      "index": true,
+      "css": true,
+      "js": true,
+      "assets": true
+    },
+    "routes_ok": true,
+    "checks": {
+      "http://localhost:3000/ui/": true,
+      "http://localhost:8080/ui/": true
+    },
+    "listening_ports": [
+      3000,
+      8080
+    ]
+  },
+  "security_alerts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 12
+  },
+  "overall_readiness_percent": 88,
+  "warnings": [
+    "CPU usage above threshold",
+    "RAM usage above threshold"
+  ],
+  "exe": {
+    "build": {
+      "attempted": false,
+      "success": false,
+      "reason": "build_skipped"
+    },
+    "launch": {
+      "launched": false,
+      "reason": "launch_skipped"
+    }
+  },
+  "optimization_actions": [
+    "cpu_throttle_applied",
+    "memory_balance_applied"
+  ]
+}

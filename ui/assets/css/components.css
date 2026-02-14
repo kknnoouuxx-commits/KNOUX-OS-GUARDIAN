@@ -1,0 +1,225 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.status-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05);
+}
+
+.status-badge.healthy {
+  color: #7ff5c2;
+}
+
+.status-badge.warning {
+  color: var(--accent-warning);
+}
+
+.status-badge.critical {
+  color: var(--accent-danger);
+}
+
+.status-badge.neutral {
+  color: #b9c8de;
+}
+
+.readiness-card {
+  min-height: 228px;
+  padding: var(--spacing-lg);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: var(--spacing-sm);
+}
+
+.card-label {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.readiness-ring {
+  --readiness: 0;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.28), transparent 55%),
+    conic-gradient(from 220deg, var(--accent-primary) calc(var(--readiness) * 1%), rgba(90, 122, 170, 0.2) 0);
+  transition: background 360ms ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 18px 28px rgba(2, 9, 18, 0.35);
+}
+
+.readiness-inner {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  background: rgba(8, 19, 34, 0.84);
+  border: 1px solid rgba(168, 221, 255, 0.25);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.ring-value {
+  font-size: 1.72rem;
+  font-weight: 700;
+}
+
+.ring-caption {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.metric-card {
+  min-height: 180px;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  display: grid;
+  align-content: space-between;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.metric-card:hover {
+  transform: translate3d(0, -4px, 0);
+  border-color: rgba(180, 231, 255, 0.34);
+  box-shadow: 0 20px 36px rgba(0, 8, 20, 0.36);
+}
+
+.metric-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.metric-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.metric-value {
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 700;
+}
+
+.metric-subtle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.module-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  background: linear-gradient(155deg, rgba(15, 30, 50, 0.58), rgba(11, 16, 30, 0.44));
+  border: 1px solid rgba(206, 231, 255, 0.16);
+  display: grid;
+  gap: 10px;
+  min-height: 156px;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.module-card:hover {
+  transform: translate3d(0, -3px, 0);
+  border-color: rgba(165, 222, 255, 0.4);
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.module-title {
+  font-size: 0.95rem;
+  font-weight: 620;
+}
+
+.module-meta {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.health-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 0.76rem;
+  border: 1px solid transparent;
+}
+
+.health-pill.healthy {
+  color: #83eec7;
+  border-color: rgba(131, 238, 199, 0.35);
+  background: rgba(96, 213, 162, 0.14);
+}
+
+.health-pill.warning {
+  color: var(--accent-warning);
+  border-color: rgba(245, 184, 92, 0.35);
+  background: rgba(245, 184, 92, 0.12);
+}
+
+.health-pill.critical {
+  color: var(--accent-danger);
+  border-color: rgba(255, 107, 120, 0.38);
+  background: rgba(255, 107, 120, 0.12);
+}
+
+.alerts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.alert-chip {
+  border-radius: var(--radius-md);
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(10, 16, 30, 0.52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-chip span {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+}
+
+.alert-chip strong {
+  font-size: 1.03rem;
+}
+
+.alert-chip.critical strong {
+  color: var(--accent-danger);
+}
+
+.alert-chip.high strong,
+.alert-chip.medium strong {
+  color: var(--accent-warning);
+}
+
+.alert-chip.low strong,
+.alert-chip.info strong {
+  color: #95d0ff;
+}

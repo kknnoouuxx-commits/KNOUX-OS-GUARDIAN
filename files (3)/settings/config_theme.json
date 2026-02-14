@@ -1,0 +1,23 @@
+{
+  "themes": {
+    "default": {
+      "name": "Crystalline",
+      "description": "High-tech crystalline aesthetic with glass morphism",
+      "primary": "#00d9ff",
+      "secondary": "#6366f1"
+    },
+    "night": {
+      "name": "Night",
+      "description": "Extra dark for low-light environments",
+      "primary": "#00ffff",
+      "bgPrimary": "#000000"
+    },
+    "calm": {
+      "name": "Calm",
+      "description": "Muted colors for reduced eye strain",
+      "primary": "#06b6d4",
+      "secondary": "#0891b2"
+    }
+  },
+  "defaultTheme": "default"
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings Panel Component</title>
+</head>
+<body>
+  <div class="settings-panel glass-modal" id="settingsPanel">
+    <style>
+      .settings-panel {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 90%;
+        max-width: 800px;
+        max-height: 90vh;
+        padding: var(--space-2xl);
+        overflow-y: auto;
+        z-index: var(--z-modal);
+        opacity: 0;
+        pointer-events: none;
+        transition: all var(--transition-slow);
+      }
+      
+      .settings-panel.open {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        pointer-events: all;
+      }
+      
+      .settings-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(8px);
+        z-index: var(--z-modal-backdrop);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-base);
+      }
+      
+      .settings-backdrop.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+      
+      .settings-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-2xl);
+        padding-bottom: var(--space-lg);
+        border-bottom: 1px solid var(--knoux-border);
+      }
+      
+      .settings-title {
+        font-family: var(--font-display);
+        font-size: var(--text-3xl);
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--knoux-primary), var(--knoux-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .close-button {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--text-2xl);
+        cursor: pointer;
+        border: none;
+        color: var(--knoux-text-primary);
+      }
+      
+      .settings-section {
+        margin-bottom: var(--space-2xl);
+      }
+      
+      .section-title {
+        font-family: var(--font-display);
+        font-size: var(--text-xl);
+        font-weight: 600;
+        margin-bottom: var(--space-lg);
+        color: var(--knoux-text-primary);
+      }
+      
+      .settings-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-lg);
+        margin-bottom: var(--space-sm);
+        border-radius: var(--radius-lg);
+        background: var(--knoux-surface);
+        transition: all var(--transition-base);
+      }
+      
+      .settings-row:hover {
+        background: var(--knoux-surface-hover);
+        transform: translateX(4px);
+      }
+      
+      .setting-info h4 {
+        font-size: var(--text-base);
+        font-weight: 600;
+        margin-bottom: var(--space-xs);
+        color: var(--knoux-text-primary);
+      }
+      
+      .setting-info p {
+        font-size: var(--text-sm);
+        color: var(--knoux-text-secondary);
+      }
+      
+      .toggle-switch {
+        position: relative;
+        width: 56px;
+        height: 28px;
+        background: var(--knoux-border);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition: background var(--transition-base);
+      }
+      
+      .toggle-switch::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 24px;
+        height: 24px;
+        background: white;
+        border-radius: 50%;
+        transition: transform var(--transition-base);
+      }
+      
+      .toggle-switch.active {
+        background: linear-gradient(135deg, var(--knoux-primary), var(--knoux-secondary));
+      }
+      
+      .toggle-switch.active::after {
+        transform: translateX(28px);
+      }
+      
+      .theme-selector {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+      }
+      
+      .theme-option {
+        padding: var(--space-lg);
+        border-radius: var(--radius-lg);
+        text-align: center;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all var(--transition-base);
+      }
+      
+      .theme-option:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--knoux-shadow-lg);
+      }
+      
+      .theme-option.active {
+        border-color: var(--knoux-primary);
+        box-shadow: var(--knoux-glow-primary);
+      }
+      
+      .theme-preview {
+        width: 100%;
+        height: 80px;
+        border-radius: var(--radius-md);
+        margin-bottom: var(--space-md);
+      }
+      
+      .theme-default {
+        background: linear-gradient(135deg, #0a0e1a, #1a1f2e);
+      }
+      
+      .theme-night {
+        background: linear-gradient(135deg, #000000, #141414);
+      }
+      
+      .theme-calm {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+      }
+      
+      .theme-name {
+        font-weight: 600;
+        color: var(--knoux-text-primary);
+      }
+    </style>
+    
+    <div class="settings-header">
+      <h2 class="settings-title">⚙️ Settings</h2>
+      <button class="close-button glass-button" onclick="closeSettings()">×</button>
+    </div>
+    
+    <!-- Theme Selection -->
+    <div class="settings-section">
+      <h3 class="section-title">Theme</h3>
+      <div class="theme-selector">
+        <div class="theme-option glass-card active" onclick="setTheme('default')">
+          <div class="theme-preview theme-default"></div>
+          <div class="theme-name">Crystalline</div>
+        </div>
+        <div class="theme-option glass-card" onclick="setTheme('night')">
+          <div class="theme-preview theme-night"></div>
+          <div class="theme-name">Night</div>
+        </div>
+        <div class="theme-option glass-card" onclick="setTheme('calm')">
+          <div class="theme-preview theme-calm"></div>
+          <div class="theme-name">Calm</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Module Toggles -->
+    <div class="settings-section">
+      <h3 class="section-title">Active Modules</h3>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>Security Hardener</h4>
+          <p>System security scanning and hardening</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleModule(this, 'security')"></div>
+      </div>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>Backup Orchestrator</h4>
+          <p>Automated backup management</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleModule(this, 'backup')"></div>
+      </div>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>Performance Optimizer</h4>
+          <p>Real-time performance monitoring</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleModule(this, 'performance')"></div>
+      </div>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>AI/ML Assistant</h4>
+          <p>Intelligent recommendations</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleModule(this, 'ai')"></div>
+      </div>
+    </div>
+    
+    <!-- Notifications -->
+    <div class="settings-section">
+      <h3 class="section-title">Notifications</h3>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>Security Alerts</h4>
+          <p>Get notified of security threats</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+      </div>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>Update Notifications</h4>
+          <p>Software and driver updates</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+      </div>
+      
+      <div class="settings-row">
+        <div class="setting-info">
+          <h4>Performance Warnings</h4>
+          <p>CPU, RAM, and disk alerts</p>
+        </div>
+        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="settings-backdrop" id="settingsBackdrop" onclick="closeSettings()"></div>
+  
+  <script>
+    function toggleModule(toggle, moduleId) {
+      toggle.classList.toggle('active');
+      const isActive = toggle.classList.contains('active');
+      console.log(`Module ${moduleId}: ${isActive ? 'enabled' : 'disabled'}`);
+      
+      // Save to localStorage
+      localStorage.setItem(`module_${moduleId}`, isActive);
+    }
+    
+    function toggleSetting(toggle) {
+      toggle.classList.toggle('active');
+    }
+    
+    function setTheme(theme) {
+      document.querySelectorAll('.theme-option').forEach(opt => opt.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('knoux-theme', theme);
+    }
+    
+    function openSettings() {
+      document.getElementById('settingsPanel').classList.add('open');
+      document.getElementById('settingsBackdrop').classList.add('open');
+    }
+    
+    function closeSettings() {
+      document.getElementById('settingsPanel').classList.remove('open');
+      document.getElementById('settingsBackdrop').classList.remove('open');
+    }
+  </script>
+</body>
+</html>

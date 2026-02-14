@@ -1,0 +1,39 @@
+{
+  "modules": {
+    "security": {
+      "id": "security",
+      "name": "Security Hardener",
+      "enabled": true,
+      "autoStart": true,
+      "priority": 1
+    },
+    "backup": {
+      "id": "backup",
+      "name": "Backup Orchestrator",
+      "enabled": true,
+      "autoStart": true,
+      "priority": 2
+    },
+    "performance": {
+      "id": "performance",
+      "name": "Performance Optimizer",
+      "enabled": true,
+      "autoStart": true,
+      "priority": 3
+    },
+    "registry": { "id": "registry", "name": "Registry Guardian", "enabled": true },
+    "disk": { "id": "disk", "name": "Disk Space Orchestrator", "enabled": true },
+    "network": { "id": "network", "name": "Network Monitor", "enabled": true },
+    "driver": { "id": "driver", "name": "Driver Health Manager", "enabled": true },
+    "forensic": { "id": "forensic", "name": "Forensic Analyzer", "enabled": true },
+    "thermal": { "id": "thermal", "name": "Thermal Controller", "enabled": true },
+    "power": { "id": "power", "name": "Power Manager", "enabled": true },
+    "apps": { "id": "apps", "name": "Application Curator", "enabled": true },
+    "ai": { "id": "ai", "name": "AI/ML Assistant", "enabled": true }
+  },
+  "globalSettings": {
+    "checkForUpdates": true,
+    "telemetry": false,
+    "autoRestart": false
+  }
+}

@@ -1,0 +1,155 @@
+2026-02-13 18:53:16,734 | INFO | Configuration loaded from: F:\KNOUX_OS_Guardian\config\config.yaml
+2026-02-13 18:53:16,735 | INFO | Communication Bus initialized
+2026-02-13 18:53:16,736 | INFO | Communication Bus started
+2026-02-13 18:53:16,739 | INFO | Database tables initialized
+2026-02-13 18:53:16,739 | INFO | Database initialized: F:\KNOUX_OS_Guardian\database\knoux_guardian.db
+2026-02-13 18:53:16,740 | INFO | Disk Space Orchestrator initialized
+2026-02-13 18:53:16,741 | INFO | Disk Space Orchestrator started
+2026-02-13 18:53:16,742 | INFO | Network Monitor initialized
+2026-02-13 18:53:16,747 | INFO | Network Monitor started
+2026-02-13 18:53:16,748 | INFO | Performance Optimizer initialized
+2026-02-13 18:53:16,750 | INFO | Performance Optimizer started
+2026-02-13 18:53:16,754 | INFO | Security Hardener initialized
+2026-02-13 18:53:16,758 | INFO | Running security audit...
+2026-02-13 18:53:16,758 | INFO | Security Hardener started
+2026-02-13 18:53:16,760 | INFO | Update Guardian initialized
+2026-02-13 18:53:16,762 | INFO | Checking for Windows updates...
+2026-02-13 18:53:16,762 | INFO | Update Guardian started
+2026-02-13 18:53:16,764 | INFO | Driver Health Manager initialized
+2026-02-13 18:53:16,765 | INFO | Driver Health Manager started
+2026-02-13 18:53:16,766 | INFO | Forensic Analyzer initialized
+2026-02-13 18:53:16,783 | INFO | Forensic Analyzer started
+2026-02-13 18:53:16,793 | INFO | Thermal Controller initialized
+2026-02-13 18:53:16,831 | INFO | Thermal Controller started
+2026-02-13 18:53:16,832 | INFO | Power Manager initialized
+2026-02-13 18:53:16,873 | INFO | Power Manager started
+2026-02-13 18:53:16,910 | INFO | Application Curator initialized
+2026-02-13 18:53:16,952 | INFO | Application Curator started
+2026-02-13 18:53:16,967 | INFO | Registry Guardian initialized
+2026-02-13 18:53:17,056 | INFO | Starting registry scan...
+2026-02-13 18:53:17,118 | INFO | Registry Guardian started
+2026-02-13 18:53:17,223 | INFO | Backup Orchestrator initialized
+2026-02-13 18:53:17,344 | INFO | Creating backup plan...
+2026-02-13 18:53:17,344 | INFO | Backup Orchestrator started
+2026-02-13 18:53:19,780 | WARNING | Critical forensic finding: Service Crash: Server
+2026-02-13 18:53:21,075 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 18:53:21,097 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 18:53:21,133 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 18:53:21,134 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 18:53:22,005 | WARNING | Low system stability detected (uptime: 28.1h)
+2026-02-13 18:53:25,154 | INFO | 127.0.0.1 - - [13/Feb/2026 18:53:25] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 18:53:26,649 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 18:53:27,054 | WARNING | High CPU usage detected: 100.0%
+2026-02-13 18:53:27,055 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 18:53:27,060 | INFO | Performing emergency CPU optimization
+2026-02-13 18:53:27,153 | INFO | Warm temperature: 70.0°C
+2026-02-13 18:53:27,627 | INFO | 127.0.0.1 - - [13/Feb/2026 18:53:27] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 18:53:28,027 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 18:53:28,739 | INFO | Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 18:53:28,972 | INFO | Emergency throttled KNOUX_OS_Guardian.exe (PID 7960)
+2026-02-13 18:53:30,452 | INFO | 127.0.0.1 - - [13/Feb/2026 18:53:30] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 18:53:30,515 | INFO | 127.0.0.1 - - [13/Feb/2026 18:53:30] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 18:53:45,427 | INFO | Found 6 pending updates
+2026-02-13 18:53:45,791 | INFO | Deferring update KB5077863 until 2026-02-20 18:53:45.791163
+2026-02-13 18:53:45,808 | INFO | Deferring update KB890830 until 2026-02-20 18:53:45.808695
+2026-02-13 18:53:45,827 | INFO | Deferring update KB2267602 until 2026-02-20 18:53:45.827696
+2026-02-13 18:53:46,140 | INFO | Executing backup: BACKUP_1770994426
+2026-02-13 18:53:46,157 | ERROR | Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 18:54:03,128 | WARNING | High CPU usage detected: 87.2%
+2026-02-13 18:54:03,128 | INFO | Performing emergency CPU optimization
+2026-02-13 18:54:05,874 | INFO | Emergency throttled Code.exe (PID 11368)
+2026-02-13 18:54:05,878 | INFO | Emergency throttled Code.exe (PID 13052)
+2026-02-13 18:54:05,882 | INFO | Emergency throttled KNOUX_OS_Guardian.exe (PID 7960)
+2026-02-13 18:57:22,163 | ERROR | Error in monitoring loop: process no longer exists (pid=8584, name='TrustedInstaller.exe')
+2026-02-13 19:03:29,839 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 19:13:32,915 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 19:23:35,741 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 19:33:38,849 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 19:35:02,640 | WARNING | High CPU usage detected: 97.7%
+2026-02-13 19:35:02,641 | INFO | Performing emergency CPU optimization
+2026-02-13 19:35:03,876 | INFO | Emergency throttled KNOUX_OS_Guardian.exe (PID 7960)
+2026-02-13 19:35:03,877 | INFO | Emergency throttled chrome.exe (PID 8772)
+2026-02-13 19:35:03,879 | INFO | Emergency throttled chrome.exe (PID 11604)
+2026-02-13 19:43:41,739 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 19:53:24,024 | WARNING | Critical forensic finding: Service Crash: Server
+2026-02-13 19:53:45,120 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 19:53:46,189 | INFO | Creating backup plan...
+2026-02-13 19:53:51,951 | INFO | Executing backup: BACKUP_1770998031
+2026-02-13 19:53:51,953 | ERROR | Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 20:03:47,937 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 20:11:40,798 | WARNING | High CPU usage detected: 83.3%
+2026-02-13 20:11:40,798 | INFO | Performing emergency CPU optimization
+2026-02-13 20:11:42,173 | INFO | Emergency throttled KNOUX_OS_Guardian.exe (PID 7960)
+2026-02-13 20:11:42,174 | INFO | Emergency throttled chrome.exe (PID 11604)
+2026-02-13 20:11:42,176 | INFO | Emergency throttled chrome.exe (PID 8772)
+2026-02-13 20:13:50,980 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 20:23:54,430 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 20:33:57,362 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 20:44:00,375 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 20:47:50,314 | WARNING | Config file not found: C:\WINDOWS\system32\config\config.yaml
+2026-02-13 20:47:50,315 | INFO | Configuration loaded from: C:\WINDOWS\system32\config\config.yaml
+2026-02-13 20:47:50,315 | INFO | Communication Bus initialized
+2026-02-13 20:47:50,316 | INFO | Communication Bus started
+2026-02-13 20:47:50,335 | INFO | Database tables initialized
+2026-02-13 20:47:50,335 | INFO | Database initialized: C:\WINDOWS\system32\database\knoux_guardian.db
+2026-02-13 20:47:50,336 | INFO | Disk Space Orchestrator initialized
+2026-02-13 20:47:50,337 | INFO | Disk Space Orchestrator started
+2026-02-13 20:47:50,337 | INFO | Network Monitor initialized
+2026-02-13 20:47:50,341 | INFO | Network Monitor started
+2026-02-13 20:47:50,342 | INFO | Performance Optimizer initialized
+2026-02-13 20:47:50,343 | INFO | Performance Optimizer started
+2026-02-13 20:47:50,344 | INFO | Security Hardener initialized
+2026-02-13 20:47:50,345 | INFO | Running security audit...
+2026-02-13 20:47:50,345 | INFO | Security Hardener started
+2026-02-13 20:47:50,348 | INFO | Update Guardian initialized
+2026-02-13 20:47:50,352 | INFO | Checking for Windows updates...
+2026-02-13 20:47:50,353 | INFO | Update Guardian started
+2026-02-13 20:47:50,353 | INFO | Driver Health Manager initialized
+2026-02-13 20:47:50,357 | INFO | Driver Health Manager started
+2026-02-13 20:47:50,358 | INFO | Forensic Analyzer initialized
+2026-02-13 20:47:50,360 | INFO | Forensic Analyzer started
+2026-02-13 20:47:50,361 | INFO | Thermal Controller initialized
+2026-02-13 20:47:50,389 | INFO | Thermal Controller started
+2026-02-13 20:47:50,391 | INFO | Power Manager initialized
+2026-02-13 20:47:50,433 | INFO | Power Manager started
+2026-02-13 20:47:50,457 | INFO | Application Curator initialized
+2026-02-13 20:47:50,530 | INFO | Application Curator started
+2026-02-13 20:47:50,539 | INFO | Registry Guardian initialized
+2026-02-13 20:47:50,563 | INFO | Starting registry scan...
+2026-02-13 20:47:50,563 | INFO | Registry Guardian started
+2026-02-13 20:47:50,565 | INFO | Backup Orchestrator initialized
+2026-02-13 20:47:50,627 | INFO | Creating backup plan...
+2026-02-13 20:47:50,627 | INFO | Backup Orchestrator started
+2026-02-13 20:47:52,815 | WARNING | Critical forensic finding: Service Crash: Server
+2026-02-13 20:47:52,926 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.23:3000
+2026-02-13 20:47:52,929 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.23:8080
+2026-02-13 20:47:53,017 | ERROR | Error in monitoring loop: process no longer exists (pid=9996, name='powershell.exe')
+2026-02-13 20:47:53,033 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 20:47:53,035 | INFO | [33mPress CTRL+C to quit[0m
+2026-02-13 20:47:56,653 | INFO | Cooling policy applied (policy=1, max_proc=100)
+2026-02-13 20:47:56,714 | INFO | Warm temperature: 70.0°C
+2026-02-13 20:47:57,071 | INFO | 127.0.0.1 - - [13/Feb/2026 20:47:57] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 20:47:58,935 | ERROR | Error checking driver health: argument of type 'NoneType' is not iterable
+2026-02-13 20:47:59,625 | INFO | Registry scan complete: Found 0 issues
+2026-02-13 20:48:00,367 | INFO | 127.0.0.1 - - [13/Feb/2026 20:48:00] "GET /ui/ HTTP/1.1" 200 -
+2026-02-13 20:48:00,650 | INFO | Security audit complete: 25.0% (1/4 checks passed)
+2026-02-13 20:48:01,528 | INFO | 127.0.0.1 - - [13/Feb/2026 20:48:01] "[36mGET /ui/ HTTP/1.1[0m" 304 -
+2026-02-13 20:48:01,671 | INFO | 127.0.0.1 - - [13/Feb/2026 20:48:01] "[36mGET /ui/ HTTP/1.1[0m" 304 -
+2026-02-13 20:48:02,517 | INFO | Executing backup: BACKUP_1771001282
+2026-02-13 20:48:02,522 | ERROR | Error executing backup: Object of type BackupPriority is not JSON serializable
+2026-02-13 20:48:17,412 | INFO | Found 6 pending updates
+2026-02-13 20:48:18,157 | INFO | Deferring update KB5077863 until 2026-02-20 20:48:18.157533
+2026-02-13 20:48:18,181 | INFO | Deferring update KB890830 until 2026-02-20 20:48:18.181092
+2026-02-13 20:48:18,201 | INFO | Deferring update KB2267602 until 2026-02-20 20:48:18.201359

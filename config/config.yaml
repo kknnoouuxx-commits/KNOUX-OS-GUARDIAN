@@ -1,0 +1,97 @@
+﻿# KNOUX OS Guardian - Configuration File
+
+# System Settings
+system:
+  offline_first: true
+  auto_fix_enabled: false
+  telemetry_enabled: false
+  language: ar
+
+# Decision Engine
+decision_engine:
+  evaluation_interval_seconds: 30
+  max_concurrent_actions: 3
+  require_user_approval_for_high_risk: true
+
+# Modules Configuration
+modules:
+  disk_space_orchestrator:
+    enabled: true
+    scan_interval_hours: 1
+    low_space_threshold_percent: 10
+    auto_cleanup_enabled: false
+    
+  update_guardian:
+    enabled: true
+    check_interval_hours: 6
+    defer_risky_updates: true
+    auto_install_security_updates: false
+    
+  performance_optimizer:
+    enabled: true
+    monitor_interval_seconds: 30
+    auto_optimize: false
+    
+  network_monitor:
+    enabled: true
+    capture_packets: false
+    block_suspicious_connections: false
+    
+  security_hardener:
+    enabled: true
+    scan_interval_days: 7
+    auto_fix_critical: false
+    
+  driver_manager:
+    enabled: true
+    monitor_crashes: true
+    auto_rollback_problematic: false
+    
+  forensic_analyzer:
+    enabled: true
+    auto_analyze_crashes: true
+    
+  thermal_controller:
+    enabled: true
+    monitor_interval_seconds: 5
+    emergency_throttle_temp_celsius: 90
+    
+  power_manager:
+    enabled: true
+    smart_charging: false
+    auto_brightness: false
+    
+  application_curator:
+    enabled: true
+    track_usage: true
+    suggest_uninstall_abandoned: true
+    
+  registry_guardian:
+    enabled: true
+    scan_interval_days: 7
+    auto_fix_safe_issues: false
+    
+  backup_orchestrator:
+    enabled: true
+    backup_frequency: daily
+    backup_destination: ""
+    incremental_backup: true
+
+# Snapshot Settings
+snapshots:
+  max_snapshots: 10
+  auto_cleanup_days: 30
+  snapshot_before_critical_actions: true
+
+# Telemetry Settings (Opt-in)
+telemetry:
+  enabled: false
+  endpoint: "https://api.knoux.ai/telemetry/batch"
+  buffer_size: 100
+  flush_interval_minutes: 60
+
+# Logging
+logging:
+  level: INFO
+  max_file_size_mb: 10
+  backup_count: 5

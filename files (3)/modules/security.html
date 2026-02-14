@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Hardener - KNOUX Guardian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/glass.css">
+  <link rel="stylesheet" href="../styles/animations.css">
+  <style>
+    body {
+      font-family: var(--font-body);
+      background: var(--knoux-bg-primary);
+      color: var(--knoux-text-primary);
+      margin: 0;
+      padding: 2rem;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 20% 30%, rgba(239, 68, 68, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .module-container { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; }
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--knoux-border);
+    }
+    .back-button {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: var(--knoux-text-primary);
+    }
+    .module-icon-large {
+      width: 80px;
+      height: 80px;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      box-shadow: 0 8px 32px rgba(239, 68, 68, 0.4);
+    }
+    .module-title {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .module-description { color: var(--knoux-text-secondary); }
+    .action-button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3);
+      transition: all 0.25s;
+    }
+    .action-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(239, 68, 68, 0.5);
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      padding: 2rem;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .service-status {
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--knoux-success);
+      border: 1px solid var(--knoux-success);
+    }
+    .service-description {
+      color: var(--knoux-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .service-metrics {
+      display: flex;
+      gap: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--knoux-border);
+    }
+    .metric { flex: 1; }
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--knoux-text-tertiary);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <div class="module-container">
+    <div class="module-header animate-fade-in-down">
+      <a href="../index.html" class="back-button glass-button hover-lift">←</a>
+      <div class="module-icon-large">🔒</div>
+      <div style="flex: 1;">
+        <h1 class="module-title">Security Hardener</h1>
+        <p class="module-description">Comprehensive system security scanning and hardening</p>
+      </div>
+      <button class="action-button" onclick="alert('Full scan initiated!\nBackend integration: F:\\\\KNOUX_OS_Guardian\\\\dist\\\\KNOUX_OS_Guardian.exe')">
+        🔍 Start Full Scan
+      </button>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card glass-card hover-lift animate-fade-in-up stagger-1">
+        <div class="service-header">
+          <h3 class="service-title"><span>🛡️</span> Vulnerability Scan</h3>
+          <span class="service-status">Ready</span>
+        </div>
+        <p class="service-description">
+          Deep system vulnerability scanning to identify security weaknesses, outdated software, and potential attack vectors.
+        </p>
+        <div class="service-metrics">
+          <div class="metric">
+            <div class="metric-label">Last Scan</div>
+            <div class="metric-value">2h ago</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Found</div>
+            <div class="metric-value">0</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Status</div>
+            <div class="metric-value">Clean</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card glass-card hover-lift animate-fade-in-up stagger-2">
+        <div class="service-header">
+          <h3 class="service-title"><span>🔐</span> System Hardening</h3>
+          <span class="service-status">Ready</span>
+        </div>
+        <p class="service-description">
+          Apply security best practices and configurations to strengthen your system against attacks and unauthorized access.
+        </p>
+        <div class="service-metrics">
+          <div class="metric">
+            <div class="metric-label">Policies</div>
+            <div class="metric-value">47</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Applied</div>
+            <div class="metric-value">45</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Status</div>
+            <div class="metric-value">95%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card glass-card hover-lift animate-fade-in-up stagger-3">
+        <div class="service-header">
+          <h3 class="service-title"><span>👥</span> Permission Auditor</h3>
+          <span class="service-status">Ready</span>
+        </div>
+        <p class="service-description">
+          Monitor and audit file permissions, user access rights, and privilege escalations across your system.
+        </p>
+        <div class="service-metrics">
+          <div class="metric">
+            <div class="metric-label">Files</div>
+            <div class="metric-value">2.4M</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Issues</div>
+            <div class="metric-value">3</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Users</div>
+            <div class="metric-value">5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card glass-card hover-lift animate-fade-in-up stagger-4">
+        <div class="service-header">
+          <h3 class="service-title"><span>📦</span> Patch Verification</h3>
+          <span class="service-status">Ready</span>
+        </div>
+        <p class="service-description">
+          Verify system patches and updates are properly installed, ensuring security patches are applied correctly.
+        </p>
+        <div class="service-metrics">
+          <div class="metric">
+            <div class="metric-label">Installed</div>
+            <div class="metric-value">847</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Pending</div>
+            <div class="metric-value">2</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Critical</div>
+            <div class="metric-value">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card glass-card hover-lift animate-fade-in-up stagger-5">
+        <div class="service-header">
+          <h3 class="service-title"><span>🔔</span> Security Alerts</h3>
+          <span class="service-status">Ready</span>
+        </div>
+        <p class="service-description">
+          Real-time security alert monitoring and notification system for immediate threat response and mitigation.
+        </p>
+        <div class="service-metrics">
+          <div class="metric">
+            <div class="metric-label">Today</div>
+            <div class="metric-value">0</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Week</div>
+            <div class="metric-value">2</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Severity</div>
+            <div class="metric-value">Low</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

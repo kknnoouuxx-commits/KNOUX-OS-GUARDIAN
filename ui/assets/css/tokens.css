@@ -1,0 +1,22 @@
+:root {
+  --glass-bg: rgba(16, 26, 44, 0.58);
+  --glass-border: rgba(231, 240, 255, 0.2);
+  --glass-blur: 20px;
+  --accent-primary: #4fd1ff;
+  --accent-danger: #ff6b78;
+  --accent-warning: #f5b85c;
+  --text-primary: #ecf4ff;
+  --text-secondary: #aabbd4;
+  --surface-soft: rgba(162, 192, 237, 0.12);
+  --surface-hard: rgba(6, 13, 24, 0.6);
+  --shadow-elevated: 0 22px 45px rgba(0, 7, 20, 0.42);
+  --shadow-soft: 0 8px 24px rgba(9, 16, 30, 0.32);
+  --radius-xl: 24px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 18px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}

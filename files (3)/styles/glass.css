@@ -1,0 +1,65 @@
+.glass {
+  background: rgba(19, 23, 34, 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: var(--knoux-surface);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--knoux-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--knoux-shadow-md);
+  transition: all var(--transition-base);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--knoux-border-bright);
+  box-shadow: var(--knoux-shadow-lg), var(--knoux-glow-primary);
+}
+
+.glass-button {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 217, 255, 0.05));
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--knoux-border-bright);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.1));
+  border-color: var(--knoux-primary);
+  box-shadow: 0 0 20px var(--knoux-primary-glow);
+}
+
+.glass-input {
+  background: rgba(26, 31, 46, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--knoux-border);
+  border-radius: var(--radius-md);
+  color: var(--knoux-text-primary);
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  transition: all var(--transition-base);
+}
+
+.glass-input:focus {
+  background: rgba(26, 31, 46, 0.8);
+  border-color: var(--knoux-primary);
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.2);
+  outline: none;
+}
+
+.glass-header {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(99, 102, 241, 0.05));
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--knoux-border);
+}
+
+.glass-sidebar {
+  background: linear-gradient(180deg, rgba(10, 14, 26, 0.95), rgba(19, 23, 34, 0.95));
+  backdrop-filter: blur(20px);
+  border-right: 1px solid var(--knoux-border);
+}

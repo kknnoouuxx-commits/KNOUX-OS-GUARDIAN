@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOUX OS Guardian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <canvas id="particles"></canvas>
+    </div>
+
+    <div id="splash-screen" class="splash-screen active">
+        <div class="splash-content">
+            <div class="logo-container">
+                <div class="logo-glow"></div>
+                <div class="logo-circle">
+                    <svg viewBox="0 0 100 100" class="logo-icon">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0EA5A4;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 10 L90 50 L50 90 L10 50 Z" fill="url(#logoGradient)" class="logo-path"/>
+                        <circle cx="50" cy="50" r="15" fill="white" opacity="0.9"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="splash-title">KNOUX OS Guardian</h1>
+            <p class="splash-tagline">منصة الحماية والتحسين الشاملة</p>
+            <button class="btn btn-primary btn-glow btn-large" onclick="startApp()">
+                <span>ابدأ الآن</span>
+            </button>
+            <div class="splash-version">v1.0.0 • Professional Edition</div>
+        </div>
+    </div>
+
+    <div id="main-app" class="main-app">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-mini">
+                        <svg viewBox="0 0 40 40">
+                            <path d="M20 5 L35 20 L20 35 L5 20 Z" fill="url(#miniLogoGradient)"/>
+                            <circle cx="20" cy="20" r="6" fill="white" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <span class="sidebar-brand">KNOUX</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                    </div>
+                    <span class="nav-label">لوحة التحكم</span>
+                </a>
+
+                <div class="nav-divider"></div>
+                <div class="nav-section-title">أنظمة الحماية</div>
+
+                <a href="#fortress" class="nav-item">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="nav-label">Fortress</span>
+                    <div class="status-dot status-healthy"></div>
+                </a>
+
+                <a href="#velocity" class="nav-item">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <span class="nav-label">Velocity</span>
+                    <div class="status-dot status-healthy"></div>
+                </a>
+
+                <a href="#core-vault" class="nav-item">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <span class="nav-label">Core Vault</span>
+                    <div class="status-dot status-healthy"></div>
+                </a>
+
+                <a href="#time-capsule" class="nav-item">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <span class="nav-label">Time Capsule</span>
+                    <div class="status-dot status-healthy"></div>
+                </a>
+
+                <a href="#net-shield" class="nav-item">
+                    <div class="nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2"/>
+                        </svg>
+                    </div>
+                    <span class="nav-label">Net Shield</span>
+                    <div class="status-dot status-healthy"></div>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <div class="breadcrumb">
+                        <span class="breadcrumb-item active">مركز التحكم</span>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <button class="topbar-action" onclick="runQuickScan()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">مركز التحكم</h1>
+                        <p class="page-subtitle">نظرة شاملة على حماية وأداء نظامك</p>
+                    </div>
+                    <button class="btn btn-primary btn-glow" onclick="runFullScan()">
+                        <span>فحص شامل</span>
+                    </button>
+                </div>
+
+                <div class="systems-grid" id="systems-grid"></div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <div class="loading-text">جارٍ المعالجة...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
